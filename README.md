@@ -17,6 +17,6 @@
         <li>Lucianop Rivas</li>
   </ul>
     
-    <p>Especifica la licencia bajo la cual se distribuye el proyecto.</p>
+    <p>Derechos Reservados</p>
 </body>
 </html>
