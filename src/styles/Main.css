@@ -23,6 +23,7 @@
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
     margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .slide_down:hover {
@@ -35,6 +36,7 @@ h1 {
 }
 
 .eslogan {
+    font-size: 18px;
     text-decoration-line: none;
     margin: 25px 0px 25px 15px;
 }
