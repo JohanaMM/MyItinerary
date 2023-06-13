@@ -1,15 +1,20 @@
-import '../styles/Cities.css'
-import imgCons from '../imagenes/pag-Construntion.jpg'
+import React from 'react';
+import '../styles/Cities.css';
+import imgCons from '../imagenes/fondo-main.jpg';
+import smallImage from '../imagenes/UC.png';
 
-function Cities (){
-
-
-    return(
-        <>
-        <img src={imgCons} className='imgCons' alt="" />
-        </>
-    )
-
+function Cities() {
+  return (
+    <div className="container">
+      <div className="image-container">
+        <img src={imgCons} className="imgCons" alt="" />
+        <div className="overlay"></div>
+        <h1 className='text'>UNDER CONSTRUCTION</h1>
+        <img src={smallImage} className="small-image" alt="" />
+      </div>
+    </div>
+  );
 }
 
-export default Cities
+export default Cities;
+

@@ -23,18 +23,25 @@
     margin-right: 20px;
 }
 
+a{
+    text-decoration: none;
+}
+
 .nav-link,
 .active{
     font-family: "Lucida Console", Monaco, monospace;
     background-color: transparent !important;
     color: rgb(0, 0, 0) !important;
     font-size: 26px;
-    margin: 0px 10px;
+    margin: 0px 14px;
     cursor: pointer;
+    padding-bottom: 0px;
+    text-decoration-line: none;
 }
 
 .nav-link:hover{
     color: rgb(0, 0, 0) !important;
+    border-bottom: 3px solid #e79d80be;
 }
 
 .navbar-nav {
@@ -46,6 +53,21 @@
 } */
 
 @media screen and (max-width: 689px) {
+    .navbar-expand-lg .navbar-nav {
+        width: 94%;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        background-color: rgb(247, 182, 151);
+        position: absolute;
+        z-index: 1000;
+    }
+
+    .nav-link:hover{
+        color: rgb(0, 0, 0) !important;
+        border-bottom: 3px solid #000000be;
+    }
+
     .logoNav{
         width: 100px;
     }

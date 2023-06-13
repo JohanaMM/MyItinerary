@@ -1,4 +1,54 @@
-.imgCons{
+.container {
+    position: relative;
     width: 100vw;
-    height: 60vh;
+    max-width: 100vw;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imgCons {
+    width: 169%;
+    height: 70vh;
+  }
+
+  img{
+    width: 100vw;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de la sombra y su opacidad */
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .small-image {
+    position: absolute;
+    top: 60%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+  }
+
+  .text {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
 }
+  
