@@ -6,8 +6,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    position: absolute;
-    bottom: 0;
+    bottom: 0%;
 }
 
 footer section ul {

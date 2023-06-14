@@ -1,6 +1,5 @@
 .bg-body-tertiary{
     background-color: transparent !important;
-    /* background: linear-gradient(rgb(143, 243, 230), white); */
     height: 16vh;
 }
 
@@ -14,6 +13,8 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    position: relative;
+    z-index: 1;
 }
 
 .navbar-expand-lg .navbar-nav{

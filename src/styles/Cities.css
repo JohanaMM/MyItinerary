@@ -9,11 +9,13 @@
   .image-container {
     position: relative;
     display: inline-block;
+    justify-content: center;
+    align-items: center;
   }
   
   .imgCons {
-    width: 169%;
-    height: 70vh;
+    width: 100vw;
+    height: 68vh;
   }
 
   img{
@@ -34,17 +36,16 @@
   .small-image {
     position: absolute;
     top: 60%;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 500px;
   }
 
   .text {
-    width: 100%;
     height: auto;
     position: absolute;
     top: 20%;
-    left: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 44px;

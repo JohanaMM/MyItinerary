@@ -1,0 +1,31 @@
+h1{
+    position: relative;
+}
+
+.C-Texto{
+    width: 100%;
+    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.imgL{
+    width: 100vw;
+    height: 710px;
+    position: absolute;
+}
+
+.textC{
+    width: 70%;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 700;
+    font-family:fantasy;
+    font-style: oblique;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 580px;
+    color: rgb(0, 0, 0);
+}

@@ -18,7 +18,6 @@ function Main() {
   return (
     <>
     <h1>Where will your next adventure be?</h1> 
-        <p className="eslogan">Find your perfect trip designed by insiders who know and love their cities</p>
         <div className="carousel-container">
       <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
