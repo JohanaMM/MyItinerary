@@ -24,7 +24,9 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
+                    <div className="logo">
                     <LinkRouter to={"/Home"}><img src={logoMI} className='logoNav' alt="logo" /></LinkRouter>
+                    </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -38,9 +40,6 @@ function Navbar() {
                         </ul>
                     </div>
                 </div>
-                {/* <p class="fly">
-                    <span class="emoji">✈️</span>
-                </p> */}
             </nav>
         </>
     )

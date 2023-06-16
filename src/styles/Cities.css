@@ -1,55 +1,76 @@
 .container {
-    position: relative;
-    width: 100vw;
-    max-width: 100vw;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .image-container {
-    position: relative;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .imgCons {
-    width: 100vw;
-    height: 68vh;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgCons {
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  width: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.363);
+  margin: 0px;
+  padding: 0px;
+}
+
+.small-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.text {
+  height: auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 44px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (max-width: 689px) {
+  .container {
+    width: 100%;
+    height: 100%;
   }
 
-  img{
+  .imgCons {
     width: 100vw;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Color de la sombra y su opacidad */
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .small-image {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
+    height: 100vh;
   }
 
   .text {
-    height: auto;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 44px;
-    font-weight: bold;
-    text-align: center;
+    font-size: 34px;
+  }
+
+  .small-image {
+    width: 350px;
+  }
 }
-  
+
+@media screen and (min-width: 690px) and (max-width: 1300px) {}

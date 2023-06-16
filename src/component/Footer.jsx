@@ -12,35 +12,31 @@ function Footer() {
       path: "LogIn"
     },
     {
-      name: "Home",
-      path: "/Home"
-    },
-    {
       name: "Cities",
       path: "/Cities"
     }
   ]
 
   return (
-    <section>
+    <section className='footer'>
+      <section className='navDos'>
+        {NavLinks.map((Link, index) => (
+          <LinkRouter to={Link.path} key={index}>
+            <p className="link">{Link.name}</p>
+          </LinkRouter>
+        ))}
+      </section>
       <section className='Footer'>
-        <section className='Footer-Res'>
-          <section className="footer">
-            <p>Privacy Policy</p>
-            <p>Terms and Conditions</p>
-            <p>Legal Warning</p>
-          </section>
-          <section className='navDos'>
-            {NavLinks.map((Link, index) => (
-              <LinkRouter to={Link.path} key={index}>
-                <p className="link">{Link.name}</p>
-              </LinkRouter>
-            ))}
-          </section>
+        <section className='footer-Responsive'>
           <section className='contact'>
             <p>Contact Us</p>
             <p><FaMobile /> 123456789</p>
             <p><FaEnvelopeOpen /> mytinerary@gmail.com</p>
+          </section>
+          <section className="politicas">
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+            <p>Legal Warning</p>
           </section>
         </section>
         <section className="iconos">

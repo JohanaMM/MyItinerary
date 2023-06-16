@@ -1,53 +1,76 @@
+.footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0%;
+    position: absolute;
+}
+
 .Footer {
     background-color: transparent;
-    width: 100vw;
+    width: 90%;
     height: 16vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-end;
-    bottom: 0%;
     margin-bottom: 15px;
+    border-top: solid white 2px;
 }
 
-footer section ul {
+.footer-Responsive {
+    width: 60%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    align-items: flex-start;
-    color: rgb(0, 0, 0);
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
-.Footer-Res .footer {
-    width: 25%;
+.politicas {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    text-decoration: underline;
-    margin-left: 15px;
 }
 
-.Footer-Res{
-    width: 100%;
+.contact {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.navDos {
+    width: 50%;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navDos p {
+    color: white;
+    font-size: 20px;
+    text-decoration-line: none;
+    text-align: left;
+    font-weight: bolder;
 }
 
 p {
-    text-decoration-line: underline;
+    text-decoration-line: none !important;
     cursor: pointer;
     font-size: 14px;
-    color: black !important;
-    font-weight: bolder;
-    line-height: 10px;
+    color: white;
 }
 
 .iconos {
     width: 40%;
     display: flex;
     margin: 10px;
-    color: rgb(0, 0, 0);
 }
 
 .iconos ul {
@@ -69,7 +92,7 @@ p {
     padding: 9px 11px 8px 11px;
     outline: solid transparent 2px;
     border-radius: 30px;
-    color: black;
+    color: white;
 }
 
 .instagram:hover {
@@ -100,47 +123,33 @@ p {
     background-color: red;
 }
 
-.navDos{
-    width: 15%;
-}
-
-.Footer-Res .contact{
-    width: 20%;
-}
-
-.navDos p{
-    width: 100%;
-    font-size: 14px;
-    text-decoration-line: none;
-}
-.contact p{
-    text-decoration-line: none;
-}
 
 .copy {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-right: 20px;
+    justify-content: flex-end;
+    text-align: right;
+    margin-right: 150px;
 }
 
 .copyR {
     width: 100%;
-    font-size: 12px !important;
-    color: rgb(0, 0, 0);
+    font-size: 12px;
+    color: rgb(255, 255, 255);
     margin-right: 10px;
     text-decoration-line: none;
+    position: absolute;
+    bottom: 0%;
 }
 
 @media screen and (max-width: 689px) {
-    .iconos{
+    .iconos {
         width: 100%;
         margin: 0;
     }
 
-    .iconos ul{
+    .iconos ul {
         width: 100%;
     }
 
@@ -169,39 +178,80 @@ p {
 
     p {
         font-size: 10px;
-        line-height: 0px;
+        line-height: 1px;
     }
 
     .Footer {
         width: 100vw;
+        height: 18vh;
         flex-direction: column-reverse;
         justify-content: flex-end;
         align-items: flex-end;
     }
 
-    .Footer-Res{
+    .footer-Responsive {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .Footer-Res .footer{
-        width: 30%;
+    .politicas {
+        width: 50%;
     }
 
-    .Footer-Res .contact{
-        width: 40%;
+    .contact {
+        width: 50%;
     }
 
-    .Footer-Res .navDos{
-        width: 20%;
+    .contact p{
+        margin-left: 50px;
+        margin-bottom: 10px;
     }
 
     .copy {
         width: 100%;
+        margin-right: 10px;
+    }
+
+    .copyR{
+        font-size: 10px;
     }
 }
 
-@media screen and (min-width: 690px) and (max-width: 1024px) {}
+@media screen and (min-width: 690px) and (max-width: 1300px) {
+    .Footer {
+        background-color: transparent;
+        width: 90%;
+        height: 19vh;
+    }
+    .footer-Responsive {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+
+    .iconos {
+        width: 50%;
+        margin: 0;
+    }
+
+    .footer-Responsive {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .politicas {
+        width: 50%;
+    }
+
+    .contact {
+        width: 50%;
+    }
+}
