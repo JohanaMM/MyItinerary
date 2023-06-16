@@ -15,10 +15,6 @@ function Navbar() {
             path: "LogIn"
         },
         {
-            name: "Home",
-            path: "/Home"
-        },
-        {
             name: "Cities",
             path: "/Cities"
         }
@@ -28,20 +24,23 @@ function Navbar() {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
-                <LinkRouter to={"/Home"}><img src={logoMI} className='logoNav' alt="logo" /></LinkRouter>
+                    <LinkRouter to={"/Home"}><img src={logoMI} className='logoNav' alt="logo" /></LinkRouter>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <ul className="navbar-nav">   
+                        <ul className="navbar-nav">
                             {NavLinks.map((Link, index) => (
                                 <LinkRouter to={Link.path} key={index}>
-                                  <li className="nav-link active">{Link.name}</li>
+                                    <li className="nav-link active">{Link.name}</li>
                                 </LinkRouter>
-                              ))}
+                            ))}
                         </ul>
                     </div>
                 </div>
+                {/* <p class="fly">
+                    <span class="emoji">✈️</span>
+                </p> */}
             </nav>
         </>
     )

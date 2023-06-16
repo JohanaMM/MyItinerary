@@ -49,24 +49,79 @@ a{
     margin-right: 20px;
 }
 
-/* button {
-    background: linear-gradient(rgba(12, 73, 63, 0.822),rgba(10, 218, 10, 0.767),rgba(247, 247, 42, 0.815));
+/* .fly {
+	font-size: 3rem;
+	margin-top: 45px;
+	animation: fly 50s linear infinite;
+	position: absolute;
+    text-decoration-line: none;
+}
+
+.fly .emoji {
+	display: block;
+	transform: rotateZ(45deg);
+}
+
+@keyframes fly {
+	0% {
+		left: 10px;
+		top: 0px;
+		transform: rotateZ(0deg);
+	}
+
+	30% {
+		left: 1600px;
+		top: 0px;
+		transform: rotateZ(0deg);
+	}
+
+	100% {
+		left: 1500px;
+		top: 0px;
+		transform: rotateZ(0deg);
+	}
+}
+
+.title_wrapper {
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    text-decoration-line: none;
+}
+
+.title_wrapper h2 {
+	margin: 0;
+	font-size: 2rem;
+	font-style: italic;
+	color: rgba(255, 255, 255, 0.5);
 } */
 
 @media screen and (max-width: 689px) {
+    body{
+        height: 100%;
+        min-height: 100%;
+    }
     .navbar-expand-lg .navbar-nav {
-        width: 94%;
+        width: 100%;
+        height: 120px;
         display: flex;
         justify-content: center;
         margin-right: 20px;
-        background-color: rgb(247, 182, 151);
-        position: absolute;
-        z-index: 1000;
+        background-color: rgb(0, 0, 0);
+        border-radius: 10px;
+        color: white;
+        position: relative;
+    }
+
+    .navbar-collapse{
+        position: relative;
     }
 
     .nav-link:hover{
-        color: rgb(0, 0, 0) !important;
-        border-bottom: 3px solid #000000be;
+        color: rgb(255, 255, 255) !important;
+        border-bottom: 3px solid #ffffffbe;
     }
 
     .logoNav{
@@ -75,10 +130,12 @@ a{
 
     .nav-link,
     .active{
+        color: white !important;
         width: 100%;
         font-size: 18px;
         text-align: center;
         margin: 10px 0px;
+        position: relative;
     }
 }
 
@@ -88,5 +145,6 @@ a{
         width: 100%;
         text-align: center;
         margin: 10px 0px;
+        position: relative;
     }
 }
