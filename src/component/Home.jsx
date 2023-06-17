@@ -16,13 +16,15 @@ import imgK from '../imagenes/buenosAires.jpg'
 import imgL from '../imagenes/manchester.webp'
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
+import Navbar from './Navbar'
 
 
 function Home() {
   return (
-    <>
+    <div className='home'>
+      <Navbar/>
       <div className="carousel-container">
-        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
         <h2>Popular MYtineraries</h2>
           <div className="carousel-inner">
             <div className="carousel-item active">
@@ -102,7 +104,7 @@ function Home() {
           <button className="button_slide slide_down">Find out <FaPlaneDeparture /></button>
         </LinkRouter>
       </div>
-    </>
+    </div>
   );
 }
 
