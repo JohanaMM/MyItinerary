@@ -2,18 +2,18 @@ import React from 'react';
 import '../styles/Home.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import imgA from '../imagenes/Brasil.jpg'
-import imgB from '../imagenes/Colombia.jpg'
-import imgC from '../imagenes/N-zelanda.jpg'
-import imgD from '../imagenes/belgica.webp'
-import imgE from '../imagenes/egipto.jpg'
-import imgF from '../imagenes/grecia.jpg'
-import imgG from '../imagenes/jesuralen.jpg'
-import imgH from '../imagenes/marruecos.webp'
-import imgI from '../imagenes/mexico.webp'
-import imgJ from '../imagenes/venezuela.jpeg'
-import imgK from '../imagenes/buenosAires.jpg'
-import imgL from '../imagenes/manchester.webp'
+import imgA from '../imagenes/ARGENTINA.svg'
+import imgB from '../imagenes/AUSTRALIA.svg'
+import imgC from '../imagenes/ESTADOS-UNIDOS.svg'
+import imgD from '../imagenes/ESPAÑA.svg'
+import imgE from '../imagenes/JAPON.svg'
+import imgF from '../imagenes/COLOMBIA.svg'
+import imgG from '../imagenes/PARIS.svg'
+import imgH from '../imagenes/REINO-UNIDO.svg'
+import imgI from '../imagenes/CHINA.svg'
+import imgJ from '../imagenes/BRASIL.svg'
+import imgK from '../imagenes/ITALIA.svg'
+import imgL from '../imagenes/VENEZUELA.svg'
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
 import Navbar from './Navbar'
@@ -31,19 +31,19 @@ function Home() {
               <div className="row">
                 <div className="col">
                   <img src={imgA} className="carousel-image" alt="Imagen 1" />
-                  <p className='nombre-img'>BRASIL</p>
+                  <p className='nombre-img'>ARGENTINA</p>
                 </div>
                 <div className="col">
                   <img src={imgB} className="carousel-image" alt="Imagen 2" />
-                  <p className='nombre-img'>COLOMBIA</p>
+                  <p className='nombre-img'>AUSTRALIA</p>
                 </div>
                 <div className="col">
                   <img src={imgC} className="carousel-image" alt="Imagen 3" />
-                  <p className='nombre-img'>NUEVA ZELANDA</p>
+                  <p className='nombre-img'>USA</p>
                 </div>
                 <div className="col">
                   <img src={imgD} className="carousel-image" alt="Imagen 4" />
-                  <p className='nombre-img'>BÉLGICA</p>
+                  <p className='nombre-img'>SPAIN</p>
                 </div>
               </div>
             </div>
@@ -51,19 +51,19 @@ function Home() {
               <div className="row">
                 <div className="col">
                   <img src={imgE} className="carousel-image" alt="Imagen 5" />
-                  <p className='nombre-img'>EGIPTO</p>
+                  <p className='nombre-img'>JAPAN</p>
                 </div>
                 <div className="col">
                   <img src={imgF} className="carousel-image" alt="Imagen 6" />
-                  <p className='nombre-img'>GRECIA</p>
+                  <p className='nombre-img'>COLOMBIA</p>
                 </div>
                 <div className="col">
                   <img src={imgG} className="carousel-image" alt="Imagen 7" />
-                  <p className='nombre-img'>JERUSALÉN</p>
+                  <p className='nombre-img'>PARIS</p>
                 </div>
                 <div className="col">
                   <img src={imgH} className="carousel-image" alt="Imagen 7" />
-                  <p className='nombre-img'>MARRUECOS</p>
+                  <p className='nombre-img'>United Kingdom</p>
                 </div>
               </div>
             </div>
@@ -71,19 +71,19 @@ function Home() {
               <div className="row">
                 <div className="col">
                   <img src={imgI} className="carousel-image" alt="Imagen 9" />
-                  <p className='nombre-img'>MÉXICO</p>
+                  <p className='nombre-img'>CHINA</p>
                 </div>
                 <div className="col">
                   <img src={imgJ} className="carousel-image" alt="Imagen 10" />
-                  <p className='nombre-img'>VENEZUELA</p>
+                  <p className='nombre-img'>BRAZIL</p>
                 </div>
                 <div className="col">
                   <img src={imgK} className="carousel-image" alt="Imagen 11" />
-                  <p className='nombre-img'>BUENOS AIRES</p>
+                  <p className='nombre-img'>ITALY</p>
                 </div>
                 <div className="col">
                   <img src={imgL} className="carousel-image" alt="Imagen 12" />
-                  <p className='nombre-img'>MÁNCHESTER</p>
+                  <p className='nombre-img'>VENEZUELA</p>
                 </div>
               </div>
             </div>
