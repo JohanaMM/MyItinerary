@@ -2,12 +2,11 @@ import React from 'react';
 import '../styles/Cities.css';
 import imgCons from '../images/fondo-main.jpg';
 import smallImage from '../images/UC.png';
-import Navbar from './Navbar'
+import Footer from './Footer'
 
 function Cities() {
   return (
     <>
-    <Navbar/>
     <div className="container">
       <div className="image-container">
         <img src={imgCons} className="imgCons" alt="" />
@@ -16,6 +15,7 @@ function Cities() {
         <img src={smallImage} className="imagePe" alt="" />
       </div>
     </div>
+    <Footer />
     </>
   );
 }
