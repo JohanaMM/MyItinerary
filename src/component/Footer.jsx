@@ -28,18 +28,18 @@ function Footer() {
       </section>
       <section className='Footer'>
         <section className='footer-Responsive'>
-          <section className='contacto'>
+          <section className='contact'>
             <p>Contact Us</p>
             <p><FaMobile /> 123456789</p>
             <p><FaEnvelopeOpen /> mytinerary@gmail.com</p>
           </section>
-          <section className="politicas">
+          <section className="politics">
             <p>Privacy Policy</p>
             <p>Terms and Conditions</p>
             <p>Legal Warning</p>
           </section>
         </section>
-        <section className="iconos">
+        <section className="icons">
           <ul>
             <li className="instagram">
               <FaInstagram />

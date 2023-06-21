@@ -1,22 +1,20 @@
 import '../styles/Hero.css'
 import { Link as LinkRouter } from 'react-router-dom'
-import logoHero from '../imagenes/mytinerary.png'
+import logoHero from '../images/mytinerary.png'
 
 
 function Hero() {
-
-
     return (
         <>
             <div className='pagP'>
                 <div className='Logo'>
                     <img src={logoHero} className='logoNavbar' alt="" />
                 </div>
-                <div className='C-Texto'>
+                <div className='C-Text'>
                     <span className='imgL' />
-                    <h1 className='textoC'>Find your perfect trip designed by insiders who know and love their cities</h1>
+                    <h1 className='textC'>Find your perfect trip designed by insiders who know and love their cities</h1>
                     <LinkRouter to={"/Home"}>
-                        <p className='boton animacion'>GET INSPIRED</p>
+                        <p className='animation button'>GET INSPIRED</p>
                     </LinkRouter>
                 </div>
             </div>
