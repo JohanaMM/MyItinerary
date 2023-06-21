@@ -77,12 +77,12 @@ h2 {
     margin-bottom: 50px;
 }
 
-.CallTo .botonI {
+.CallTo .buttonI {
     margin-right: 50px;
     margin-top: 50px;
 }
 
-.botonI{
+.buttonI{
     width: 200px;
     font-size: 20px;
     border: solid 2px white;
@@ -91,7 +91,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.animacion {
+.animation {
     animation: border-glow 2s linear infinite;
   }
   
@@ -141,7 +141,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-.nombre-img{
+.name-img{
     width: 22%;
     position: absolute;
     margin-top: 150px;
@@ -155,7 +155,7 @@ h2 {
     border-radius: 5px;
 }
 
-.nombre-img:hover{
+.nam-img:hover{
     background-color: rgba(0, 0, 0, 0.89);
 }
 
@@ -215,7 +215,7 @@ h2 {
         margin: 0px 10px 20px 0px;
     }
 
-    .nombre-img{
+    .name-img{
         width: 23%;
         height: 20px;
         font-size: 10px;
@@ -235,7 +235,7 @@ h2 {
 }
 
 @media screen and (min-width: 690px) and (max-width: 1300px) {
-    .nombre-img{
+    .name-img{
         width: 20%;
         font-size: 16px;
         margin-top: 80px;
