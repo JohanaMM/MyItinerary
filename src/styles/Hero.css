@@ -140,7 +140,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    text-align: right;
+    text-align: left;
 }
 
 .copyR-Hero {
@@ -154,6 +154,9 @@ p{
 }
 
 @media screen and (max-width: 689px) {
+    .C-Text{
+        width: 80%;
+    }
     .textC{
         width: 90%;
         font-size: 30px;
@@ -163,6 +166,10 @@ p{
     .button{
         font-size: 20px;
         margin-top: 30px;
+    }
+
+    .copyR-Hero {
+        width: 80%;
     }
     
 }
@@ -178,5 +185,9 @@ p{
         font-size: 25px;
         margin-top: 30px;
         padding: 5px;
+    }
+
+    .copyR-Hero {
+        width: 35%;
     }
 }
