@@ -16,16 +16,15 @@ import imgK from '../images/ITALIA.svg'
 import imgL from '../images/VENEZUELA.svg'
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
-import Navbar from './Navbar'
+import Footer from './Footer'
 
 
 function Home() {
   return (
     <div>
-      <Navbar/>
       <div className="carousel-container">
-      <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-        <h2>Popular MYtineraries</h2>
+        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+          <h2>Popular MYtineraries</h2>
           <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
@@ -104,6 +103,7 @@ function Home() {
           <button className="animation buttonI">Find out <FaPlaneDeparture /></button>
         </LinkRouter>
       </div>
+      <Footer />
     </div>
   );
 }

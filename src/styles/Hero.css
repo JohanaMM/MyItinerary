@@ -46,12 +46,13 @@ h1{
 }
 
 .C-Text{
-    width: 100%;
-    height: 50vh;
+    width: 50%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items:flex-start;
     justify-content: center;
+    margin-left: 50px;
 }
 
 p{
@@ -59,25 +60,97 @@ p{
 }
 
 .pagP{
-    background-image: url(../imagenes/HERO.svg);
+    background-image: url(../images/hero.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 101vw;
+    width: 100vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
 .textC{
-    width: 90%;
+    width: 100%;
     text-decoration: none;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 700;
     font-family:fantasy;
     font-style: oblique;
-    text-align: center;
-    color: #4444447c;
+    text-align: left;
+    color: #2e2e2eb4;
     position: relative;
+}
+
+.iconsHero {
+    width: 40%;
+    display: flex;
+    top: 85%;
+    position: absolute;
+}
+
+.iconsHero ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.iconsHero li {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-end;
+    margin: 10px;
+    font-size: 35px;
+    padding: 9px 11px 8px 11px;
+    outline: solid transparent 2px;
+    border-radius: 30px;
+    color: white;
+}
+
+.instagram:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(#ffd500e7, #ff7b00e1, #ff006ae1, #d300c5e0, #7538fad8);
+}
+
+.facebook:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: #2e5bbb;
+}
+
+.twitter:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: dodgerblue;
+}
+
+.youtube:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: red;
+}
+
+
+.copyHero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.copyR-Hero {
+    width: 20%;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin-left: 20px;
+    text-decoration-line: none;
+    position: absolute;
+    bottom: 0%;
 }
 
 @media screen and (max-width: 689px) {
