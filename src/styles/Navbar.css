@@ -5,7 +5,7 @@
 }
 
 .logo{
-    width: 30%;
+    width: 13%;
 }
 
 .logoNav{
@@ -25,12 +25,11 @@
 }
 
 .navbar-expand-lg .navbar-nav{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-right: 20px;
-    margin-left: 40px;
 }
 
 a{
@@ -41,17 +40,12 @@ a{
 .active{
     font-family: "Lucida Console", Monaco, monospace;
     background-color: transparent !important;
-    color: rgb(0, 0, 0) !important;
-    font-size: 26px;
+    color: black!important;
+    font-size: 25px;
     margin: 0px 14px;
     cursor: pointer;
     padding-bottom: 0px;
     text-decoration-line: none;
-}
-
-.nav-link:hover{
-    color: rgb(0, 0, 0) !important;
-    border-bottom: 3px solid #e79d80be;
 }
 
 .navbar-nav {

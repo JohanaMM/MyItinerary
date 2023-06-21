@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import logoMI from '../images/mytinerary.png'
 import '../styles/Navbar.css'
-import { FaUser } from "react-icons/fa"
+import { FaUserCircle } from "react-icons/fa"
 import { Link as LinkRouter } from 'react-router-dom'
 
 
@@ -11,11 +11,12 @@ function Navbar() {
 
     const NavLinks = [
         {
-            name: <FaUser />,
+            name: <FaUserCircle size='50px' color='white' />,
             path: "LogIn"
         },
         {
             name: "Cities",
+            icon: "",
             path: "/Cities"
         }
     ]
