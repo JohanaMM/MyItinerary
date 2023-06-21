@@ -14,9 +14,9 @@ function Hero() {
                 </div>
                 <div className='C-Texto'>
                     <span className='imgL' />
-                    <h1 className='textC'>Find your perfect trip designed by insiders who know and love their cities</h1>
+                    <h1 className='textoC'>Find your perfect trip designed by insiders who know and love their cities</h1>
                     <LinkRouter to={"/Home"}>
-                        <p className='boton border-animation'>GET INSPIRED</p>
+                        <p className='boton animacion'>GET INSPIRED</p>
                     </LinkRouter>
                 </div>
             </div>

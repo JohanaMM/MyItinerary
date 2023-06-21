@@ -28,7 +28,7 @@ function Footer() {
       </section>
       <section className='Footer'>
         <section className='footer-Responsive'>
-          <section className='contact'>
+          <section className='contacto'>
             <p>Contact Us</p>
             <p><FaMobile /> 123456789</p>
             <p><FaEnvelopeOpen /> mytinerary@gmail.com</p>

@@ -24,18 +24,8 @@
     border-radius: 8px;
     font-weight: bolder;
 }
-
-button {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #ffffff;
-    color: #000000;
-  }
   
-  .border-animation {
+  .animacion {
     animation: border-glow 2s linear infinite;
   }
   
@@ -78,7 +68,7 @@ p{
     overflow: hidden;
 }
 
-.textC{
+.textoC{
     width: 90%;
     text-decoration: none;
     font-size: 60px;
@@ -91,7 +81,7 @@ p{
 }
 
 @media screen and (max-width: 689px) {
-    .textC{
+    .textoC{
         width: 90%;
         font-size: 30px;
         margin-top: 100px;
@@ -105,7 +95,7 @@ p{
 }
 
 @media screen and (min-width: 690px) and (max-width: 1300px) {
-    .textC{
+    .textoC{
         width: 90%;
         font-size: 45px;
         margin-top: 100px;

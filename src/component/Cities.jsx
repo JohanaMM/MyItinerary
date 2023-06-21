@@ -8,12 +8,12 @@ function Cities() {
   return (
     <>
     <Navbar/>
-    <div className="container">
-      <div className="image-container">
+    <div className="contenedor">
+      <div className="imagen-contenedor">
         <img src={imgCons} className="imgCons" alt="" />
-        <div className="overlay"></div>
-        <h1 className='text'>UNDER CONSTRUCTION</h1>
-        <img src={smallImage} className="small-image" alt="" />
+        <div className="capa"></div>
+        <h1 className='texto'>UNDER CONSTRUCTION</h1>
+        <img src={smallImage} className="imagenPe" alt="" />
       </div>
     </div>
     </>

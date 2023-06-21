@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import imgA from '../imagenes/ARGENTINA.svg'
 import imgB from '../imagenes/AUSTRALIA.svg'
-import imgC from '../imagenes/ESTADOS-UNIDOS.svg'
-import imgD from '../imagenes/ESPAÑA.svg'
+import imgC from '../imagenes/USA.svg'
+import imgD from '../imagenes/ESPANA.svg'
 import imgE from '../imagenes/JAPON.svg'
 import imgF from '../imagenes/COLOMBIA.svg'
 import imgG from '../imagenes/PARIS.svg'
@@ -21,7 +21,7 @@ import Navbar from './Navbar'
 
 function Home() {
   return (
-    <div className='home'>
+    <div>
       <Navbar/>
       <div className="carousel-container">
       <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
@@ -63,7 +63,7 @@ function Home() {
                 </div>
                 <div className="col">
                   <img src={imgH} className="carousel-image" alt="Imagen 7" />
-                  <p className='nombre-img'>United Kingdom</p>
+                  <p className='nombre-img'>UNITED KINGDOM</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ function Home() {
       <div className='CallTo'>
         <h3>Where will your next adventure be?</h3>
         <LinkRouter to={"/Cities"}>
-          <button className="button_slide slide_down">Find out <FaPlaneDeparture /></button>
+          <button className="botonI animacion">Find out <FaPlaneDeparture /></button>
         </LinkRouter>
       </div>
     </div>
