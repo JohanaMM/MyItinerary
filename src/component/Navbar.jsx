@@ -11,7 +11,7 @@ function Navbar() {
 
     const NavLinks = [
         {
-            icon: <FaUserCircle size='50px' color='white' />,
+            name: <FaUserCircle size='50px' color='white' />,
             path: "LogIn"
         },
         {
