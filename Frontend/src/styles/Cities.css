@@ -1,0 +1,199 @@
+.bodyCountry {
+    width: 100vw;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Country {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 40px;
+}
+
+.cardCountry {
+    width: 350px;
+    margin: 20px;
+    position: relative;
+}
+
+.infCountry {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.titleLocation {
+    position: absolute;
+}
+
+.nameCountry {
+    position: absolute;
+}
+
+.searchFilters {
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+:root {
+    --gray: #29292983;
+    --darkgray: #2c3e50;
+}
+
+select {
+    width: 300px;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+
+.select {
+    position: relative;
+    display: flex;
+    width: 30em;
+    height: 2.5em;
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #29292967;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+.select:hover::after {
+    color: #12c6f3;
+}
+
+input[type="search"] {
+    width: 28em;
+    height: 2.5em;
+    background-color: rgba(26, 31, 56, 0.541);
+    margin: 0px 15px;
+    border-radius: 5px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.534);
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.card {
+    width: 350px !important;
+    position: relative;
+    border-radius: 10px;
+}
+
+.imgCountry {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+.punctuation {
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    background-color: #07070777;
+    padding: 3px;
+    border-radius: 30px;
+}
+
+.likeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.infCountry {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 50px;
+    left: 10px;
+}
+
+.titleLocation {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nameCountry {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.nameCountry svg {
+    margin-right: 5px;
+}
+
+.up{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttonUp {
+    border: 2px solid black;
+    border-radius: 100px;
+    padding: 6px 14px 10px;
+    font-size: 30px;
+    background-color: rgba(80, 75, 75, 0.733);
+    color: black;
+    cursor: pointer;
+    margin-right: 15px;
+}
