@@ -11,7 +11,7 @@ const citiesControllers = {
             error = err
         }
         res.json({
-            respose: error ? "ERROR" : { cities },
+            response: error ? "ERROR" : { cities },
             success: error ? false : true,
             error: error
         })
@@ -25,7 +25,7 @@ const citiesControllers = {
             city = await Cities.find({ _id: id })
         } catch (err) { error = err }
         res.json({
-            respose: error ? "ERROR" : city,
+            response: error ? "ERROR" : city,
             success: error ? false : true,
             error: error
         })
@@ -121,7 +121,7 @@ const citiesControllers = {
             city = await Cities.findOneAndDelete({ _id: id })
         } catch (err) { error = err }
         res.json({
-            respose: error ? "ERROR" : city,
+            response: error ? "ERROR" : city,
             success: error ? false : true,
             error: error
         })
