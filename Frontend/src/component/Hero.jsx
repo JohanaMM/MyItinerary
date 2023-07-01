@@ -1,11 +1,12 @@
 import '../styles/Hero.css'
 import { Link as LinkRouter } from 'react-router-dom'
 import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa"
-
+import Navbar from './Navbar'
 
 function Hero() {
     return (
         <>
+         <Navbar />
         <div className='pagP'>
             <div className='C-Text'>
                 <span className='imgL' />

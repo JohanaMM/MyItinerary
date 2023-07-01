@@ -2,26 +2,28 @@ import React from 'react';
 import '../styles/Home.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import imgA from '../images/hero.jpeg'
-import imgB from '../images/hero.jpeg'
-import imgC from '../images/hero.jpeg'
-import imgD from '../images/hero.jpeg'
-import imgE from '../images/hero.jpeg'
-import imgF from '../images/hero.jpeg'
-import imgG from '../images/hero.jpeg'
-import imgH from '../images/hero.jpeg'
-import imgI from '../images/hero.jpeg'
-import imgJ from '../images/hero.jpeg'
-import imgK from '../images/hero.jpeg'
-import imgL from '../images/hero.jpeg'
+import imgA from '../images/MANCHESTER.svg'
+import imgB from '../images/SHANGAI.svg'
+import imgC from '../images/VENICE.svg'
+import imgD from '../images/MANCHESTER.svg'
+import imgE from '../images/SHANGAI.svg'
+import imgF from '../images/VENICE.svg'
+import imgG from '../images/MANCHESTER.svg'
+import imgH from '../images/SHANGAI.svg'
+import imgI from '../images/VENICE.svg'
+import imgJ from '../images/MANCHESTER.svg'
+import imgK from '../images/SHANGAI.svg'
+import imgL from '../images/VENICE.svg'
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
+import Navbar from './Navbar'
 import Footer from './Footer'
 
 
 function Home() {
   return (
     <div>
+      <Navbar />
       <div className="carousel-container">
         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
           <h2>Popular MYtineraries</h2>

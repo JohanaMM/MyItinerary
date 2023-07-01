@@ -11,16 +11,10 @@
 .Country {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     position: relative;
     margin-top: 40px;
-}
-
-.cardCountry {
-    width: 350px;
-    margin: 20px;
-    position: relative;
 }
 
 .infCountry {
@@ -111,10 +105,11 @@ input[type="search"] {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.card {
-    width: 350px !important;
+.cardCities{
+    width: 280px !important;
     position: relative;
     border-radius: 10px;
+    margin: 20px;
 }
 
 .imgCountry {
@@ -129,13 +124,18 @@ input[type="search"] {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.315);
+    background-color: rgba(0, 0, 0, 0.384);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
+}
+
+.overlay:hover{
+    background-color: transparent;
 }
 
 .punctuation {
@@ -157,7 +157,7 @@ input[type="search"] {
 }
 
 .infCountry {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -166,12 +166,12 @@ input[type="search"] {
 }
 
 .titleLocation {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .nameCountry {
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     margin-top: 25px;
@@ -190,10 +190,19 @@ input[type="search"] {
 .buttonUp {
     border: 2px solid black;
     border-radius: 100px;
-    padding: 6px 14px 10px;
+    padding: 1px 10px 6px;
     font-size: 30px;
-    background-color: rgba(80, 75, 75, 0.733);
+    background-color: rgba(80, 75, 75, 0.527);
     color: black;
     cursor: pointer;
     margin-right: 15px;
+}
+
+.loading{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
