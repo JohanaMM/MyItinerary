@@ -105,10 +105,11 @@ input[type="search"] {
     font-family: "Lucida Console", Monaco, monospace;
 }
 
-.card {
+.cardCities{
     width: 280px !important;
     position: relative;
     border-radius: 10px;
+    margin: 20px;
 }
 
 .imgCountry {
@@ -131,6 +132,10 @@ input[type="search"] {
     color: white;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.overlay:hover{
+    background-color: transparent;
 }
 
 .punctuation {
@@ -185,9 +190,9 @@ input[type="search"] {
 .buttonUp {
     border: 2px solid black;
     border-radius: 100px;
-    padding: 6px 14px 10px;
+    padding: 1px 10px 6px;
     font-size: 30px;
-    background-color: rgba(80, 75, 75, 0.733);
+    background-color: rgba(80, 75, 75, 0.527);
     color: black;
     cursor: pointer;
     margin-right: 15px;

@@ -18,10 +18,6 @@ function Navbar() {
             name: "Cities",
             path: "/Cities"
         },
-        {
-            name: "CityDetails",
-            path: "/CityDetails"
-        }
     ]
 
     return (
