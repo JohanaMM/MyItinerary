@@ -109,7 +109,7 @@ function Cities() {
             </div>
           ) : (
             <div className='loading'>
-              <h3>LOADING...</h3>
+              <h3>LOADING</h3>
             </div>
           )}
         </div>
