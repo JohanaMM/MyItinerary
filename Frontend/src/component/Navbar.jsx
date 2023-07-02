@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import logoMI from '../images/mytinerary.png'
+ import logoMI from '../images/logo.png'
 import '../styles/Navbar.css'
 import { FaUserCircle } from "react-icons/fa"
 import { Link as LinkRouter } from 'react-router-dom'

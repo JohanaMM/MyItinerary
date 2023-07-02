@@ -20,7 +20,7 @@
     position: relative;
     top: 8%;
     color: white;
-    font-size: 10em;
+    font-size: 8em;
 }
 
 .overlayDitails {
@@ -47,8 +47,8 @@
     position: relative;
     border: 2px solid black;
     border-radius: 100px;
-    padding: 3px 7px 5px 5px;
-    font-size: 30px;
+    padding: 5px 8px 5px 5px;
+    font-size: 20px;
     background-color: white;
     color: black;
     cursor: pointer;
@@ -66,7 +66,7 @@
     color: black;
     cursor: pointer;
     right: 0%;
-    bottom: -12%;
+    bottom: -30%;
 }
 
 .sectionInf{
@@ -94,7 +94,7 @@
 }
 
 .description{
-    width: 80%;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -105,10 +105,10 @@
 .description p{
     width: 90%;
     height: 90%;
-    padding: 30px;
+    padding: 20px;
     background-color: rgba(0, 0, 0, 0.795);
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 17px;
     text-align: justify;
     position: relative;
 }
@@ -169,7 +169,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 5px;
+    padding: 0px 10px;
     position: relative;
 }
 
@@ -184,7 +184,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 5px;
+    padding: 0px 10px;
     position: relative;
 }
 
@@ -213,4 +213,71 @@
     cursor: pointer;
     right: 0%;
     bottom: 20%;
+}
+
+@media screen and (max-width: 600px) {
+    .title{
+        top: 20%;
+        font-size: 2em;
+    }
+
+    .buttonDetails {
+        bottom: -80%;
+    }
+
+    .sectionInf{
+        flex-direction: column-reverse;
+        height: 40vh;
+    }
+
+    .items{
+        width: 100%;
+    }
+
+    .items p{
+        font-size: 20px;
+    }
+
+    .description{
+        align-items: center;
+        margin-top: 50px !important;
+    }
+
+    .description p{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .titleActivities{
+        font-size: 25px;
+        height: 25px;
+    }  
+    
+    .card{
+        width: 35% !important;
+        height: 130px;
+        justify-content: space-between;
+    }
+
+    .imgActivities{
+        height: 50%;
+        top: 0%;
+    }
+
+    .titleCard{
+        font-size: 10px;
+    }
+
+    .DetailsTitle{
+        font-size: 10px;
+    }
+
+    .detailsinf{
+        font-size: 8px;
+    }
+
+    .day{
+        font-size: 10px;
+    }
+
 }
