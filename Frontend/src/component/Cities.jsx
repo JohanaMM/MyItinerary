@@ -122,4 +122,3 @@ function Cities() {
 }
 
 export default Cities;
-

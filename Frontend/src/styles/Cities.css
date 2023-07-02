@@ -58,6 +58,7 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 1em;
+    color: #fff;
     background-color: var(--darkgray);
     background-image: none;
     cursor: pointer;
@@ -147,6 +148,11 @@ input[type="search"] {
 .punctuation {
     width: 65px;
     height: 25px;
+    background-color: transparent;
+}
+
+.punctuation {
+    width: 50px;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -212,6 +218,7 @@ input[type="search"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 @media screen and (max-width: 689px) {
@@ -234,4 +241,5 @@ input[type="search"] {
         height: 2em;
 
     }
+
 }
