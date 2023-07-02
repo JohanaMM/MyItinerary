@@ -45,7 +45,7 @@ function CityDetails() {
                         <div className="overlayDitails">
                             <LinkRouter to='/Cities'>
                                 <span className='backCities' onClick={handleToggle}>
-                                    <FaAngleLeft />
+                                    <FaAngleLeft fontSize='30px'/> Back to cities
                                 </span>
                             </LinkRouter>
                             <p className='title'>{city[0].name}</p>
@@ -82,7 +82,7 @@ function CityDetails() {
                                             </span>
                                             <span className='time'>
                                                 <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'>3 hours</p>
+                                                <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
                                         </div>
@@ -95,7 +95,7 @@ function CityDetails() {
                                             </span>
                                             <span className='time'>
                                                 <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'>3 hours</p>
+                                                <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
                                         </div>
@@ -108,7 +108,7 @@ function CityDetails() {
                                             </span>
                                             <span className='time'>
                                                 <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'>3 hours</p>
+                                                <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
                                         </div>
@@ -121,7 +121,7 @@ function CityDetails() {
                                             </span>
                                             <span className='time'>
                                                 <p className='DetailsTitle'>Time:</p>
-                                                <p className='detailsinf'>3 hours</p>
+                                                <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
                                         </div>

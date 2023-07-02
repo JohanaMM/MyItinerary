@@ -1,3 +1,9 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
 .bodyCountry {
     width: 100vw;
     height: 60%;
@@ -46,7 +52,6 @@
 }
 
 select {
-    width: 300px;
     appearance: none;
     outline: 0;
     border: 0;
@@ -106,10 +111,12 @@ input[type="search"] {
 }
 
 .cardCities{
-    width: 280px !important;
+    width: 280px;
+    height: 200px;
     position: relative;
     border-radius: 10px;
     margin: 20px;
+    overflow: hidden;
 }
 
 .imgCountry {
@@ -135,6 +142,12 @@ input[type="search"] {
 }
 
 .overlay:hover{
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.punctuation {
+    width: 65px;
+    height: 25px;
     background-color: transparent;
 }
 
@@ -145,8 +158,8 @@ input[type="search"] {
     left: 10px;
     cursor: pointer;
     background-color: #07070777;
-    padding: 3px;
     border-radius: 30px;
+    text-align: center;
 }
 
 .likeButton {
@@ -157,7 +170,7 @@ input[type="search"] {
 }
 
 .infCountry {
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -205,4 +218,28 @@ input[type="search"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+@media screen and (max-width: 689px) {
+    .searchFilters{
+        flex-direction: column-reverse;
+    }
+
+    select{
+        font-size: 12px;
+    }
+
+    .select {
+        width: 20em;
+        height: 2em;
+        margin-top: 10px;
+    }
+
+    input[type="search"] {
+        width: 20em;
+        height: 2em;
+
+    }
+
 }

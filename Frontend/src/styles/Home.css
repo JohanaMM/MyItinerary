@@ -126,17 +126,12 @@ h2 {
     height: 100%;
 }
 
-.carousel-image {
-    width: 100%;
-    border-radius: 10px;
-}
-
 .col{
-    width: 290px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .name-img{
@@ -163,9 +158,9 @@ h2 {
         font-size: 12px;
     }
 
-    .CallTo button {
-        margin-right: 10px;
-        margin-top: 20px;
+    .CallTo .buttonI {
+        margin-right: 20px;
+        margin-top: 60px;
     }
 
     .CallTo{
