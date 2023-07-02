@@ -3,18 +3,6 @@
     padding: 0;
 }
 
-.Logo{
-    position: relative;
-    width: 100%;
-    height: 120px;
-}
-
-.logoNavbar{
-    width: 95px;
-    cursor: pointer;
-    margin-left: 50px;
-    position: relative;
-}
 
 .boton{
     font-size: 25px;
@@ -71,11 +59,10 @@ p{
 .textoC{
     width: 90%;
     text-decoration: none;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
-    font-family:fantasy;
-    font-style: oblique;
-    text-align: center;
+    font-family:roboto;
+    text-align: left;
     color: #4444447c;
     position: relative;
 }
