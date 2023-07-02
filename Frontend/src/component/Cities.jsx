@@ -66,7 +66,6 @@ function Cities() {
                   .replace(/[\u0300-\u036f]/g, '')
                   .trim()
                   .toLowerCase();
-
                 const filterSearchNormalized = filter.search
                   .normalize('NFD')
                   .replace(/[\u0300-\u036f]/g, '')
