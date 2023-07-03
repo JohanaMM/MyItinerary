@@ -133,7 +133,7 @@ p {
     bottom: 0%;
 }
 
-@media screen and (max-width: 689px) {
+@media screen and (max-width: 600px) {
     .icons {
         width: 100%;
         margin: 0;
@@ -210,7 +210,7 @@ p {
     }
 }
 
-@media screen and (min-width: 690px) and (max-width: 1300px) {
+@media screen and (min-width: 601px) and (max-width: 1280px) {
     .Footer {
         background-color: transparent;
         width: 90%;

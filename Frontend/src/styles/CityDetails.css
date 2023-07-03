@@ -282,3 +282,63 @@
     }
 
 }
+
+@media screen and (min-width: 601px) and (max-width: 1023px) {
+    .title{
+        top: 20%;
+        font-size: 5em;
+    }
+    
+    .buttonDetails {
+        bottom: -50%;
+    }
+
+    .sectionInf{
+        flex-direction: column-reverse;
+        height: 42vh;
+    }
+
+    .description{
+        align-items: center;
+    }
+
+    .description p{
+        font-size: 16px;
+    }
+
+    .items p{
+        font-size: 30px;
+    }
+
+    .titleActivities{
+        font-size: 35px;
+        height: 25px;
+    } 
+
+    .card{
+        width: 30% !important;
+        height: 210px;
+        justify-content: space-between;
+    }
+
+    .imgActivities{
+        height: 40%;
+        top: 0%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .title{
+        top: 20%;
+        font-size: 6em;
+    }
+
+    .description p{
+        font-size: 14px;
+    }
+
+    .card{
+        height: 240px;
+     }
+
+}
