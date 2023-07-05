@@ -15,7 +15,7 @@ function CityDetails() {
 
     async function getCity(id) {
         let cityDB
-        cityDB = await axios.get("http://localhost:5000/api/cities/" + id);
+        cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
 
         setCity(cityDB.data.response);
     }
@@ -51,7 +51,7 @@ function CityDetails() {
                             <p className='title'>{city[0].name}</p>
                             <div className='details'>
                                 <span className='buttonDetails' onClick={handleToggle}>
-                                    <FaAngleDown />
+                            <FaAngleDown />
                                 </span>
                             </div>
                         </div>
@@ -73,7 +73,7 @@ function CityDetails() {
                                         <p className='titleActivities'>Itineraries</p>
                                     </div>
                                     <div className='containerCArds'>
-                                        <div className='card'>
+                                    <LinkRouter to='/Itineraries' className='card'>
                                             <img src={bodyCity} className='imgActivities' alt="" />
                                             <p className='titleCard'>TITLE</p>
                                             <span className='type'>
@@ -85,8 +85,8 @@ function CityDetails() {
                                                 <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
+                                    </LinkRouter>
+                                    <LinkRouter to='/Itineraries' className='card'>
                                             <img src={bodyCity} className='imgActivities' alt="" />
                                             <p className='titleCard'>TITLE</p>
                                             <span className='type'>
@@ -98,8 +98,8 @@ function CityDetails() {
                                                 <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
+                                    </LinkRouter>
+                                    <LinkRouter to='/Itineraries' className='card'>
                                             <img src={bodyCity} className='imgActivities' alt="" />
                                             <p className='titleCard'>TITLE</p>
                                             <span className='type'>
@@ -111,8 +111,8 @@ function CityDetails() {
                                                 <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
-                                        </div>
-                                        <div className='card'>
+                                    </LinkRouter>
+                                    <LinkRouter to='/Itineraries' className='card'>
                                             <img src={bodyCity} className='imgActivities' alt="" />
                                             <p className='titleCard'>TITLE</p>
                                             <span className='type'>
@@ -124,7 +124,7 @@ function CityDetails() {
                                                 <p className='detailsinf'> hours</p>
                                             </span>
                                             <p className='day'>days of the activity</p>
-                                        </div>
+                                    </LinkRouter>
                                         <div className='up'>
                                             <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
                                         </div>
