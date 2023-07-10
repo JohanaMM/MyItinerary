@@ -1,0 +1,16 @@
+.itemsCard{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px 0px 15px;
+}
+
+.itemsCard p{
+    color: black;
+    text-align: center;
+}
+
+.buttonItinerary{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+}
