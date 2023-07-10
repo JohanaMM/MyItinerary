@@ -9,6 +9,7 @@ import CardsItinerary from './CardItinerary'
 function CityDetails() {
 
     const [isExpanded, setIsExpanded] = useState(false);
+    
     const [city, setCity] = useState([])
 
     const { id } = useParams()
