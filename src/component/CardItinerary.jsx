@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
-import { red } from '@mui/material/colors';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -14,7 +13,6 @@ import imgCardActivity from '../images/hero.jpeg'
 import Button from '@mui/material/Button';
 import { Link as LinkRouter } from 'react-router-dom';
 
-const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
  function RecipeReviewCard() {
 
@@ -37,9 +35,7 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
             color: 'white',
           }}
           avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              MJL
-            </Avatar>
+            <Avatar alt="Remy Sharp" src={imgCardActivity} />
           }
           titleTypographyProps={{
             color: 'white',

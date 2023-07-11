@@ -14,7 +14,7 @@ function ShoppingCart(){
             <Navbar />
             <div className="containerI">
                 <div className="imgCotainerI">
-                    <p className='textI'>UNDER CONSTRUCTION</p>
+                    <p className='textI'>CART UNDER CONSTRUCTION</p>
                     <img src={smallImage} className="imageI" alt="UNDER CONSTRUCTION" />
                 </div>
             </div>

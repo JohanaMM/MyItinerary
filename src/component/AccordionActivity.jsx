@@ -18,7 +18,7 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>What is included</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -37,7 +37,7 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Departure and Return</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -56,7 +56,7 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>Cancellation Policy</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -75,7 +75,7 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Frequent Questions</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

@@ -27,6 +27,8 @@
   
   .animation {
     animation: border-glow 2s linear infinite;
+    color: white;
+    font-weight: lighter;
   }
   
   @keyframes border-glow {

@@ -188,7 +188,7 @@ function Home() {
       <div className='CallTo'>
         <h3>Where will your next adventure be?</h3>
         <LinkRouter to={"/Cities"}>
-          <button className="animation buttonI">Find out <FaPlaneDeparture /></button>
+          <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
         </LinkRouter>
       </div>
       <Footer />
