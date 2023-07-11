@@ -2,23 +2,61 @@ import React from 'react';
 import '../styles/Home.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import imgA from '../images/ARGENTINA.svg'
-import imgB from '../images/AUSTRALIA.svg'
-import imgC from '../images/USA.svg'
-import imgD from '../images/SPAIN.svg'
-import imgE from '../images/JAPAN.svg'
-import imgF from '../images/COLOMBIA.svg'
-import imgG from '../images/FRANCE.svg'
-import imgH from '../images/UNITED-KINDOM.svg'
-import imgI from '../images/CHINA.svg'
-import imgJ from '../images/BRAZIL.svg'
-import imgK from '../images/ITALY.svg'
-import imgL from '../images/VENEZUELA.svg'
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
+const imgCarousel = [
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ARGENTINA.svg?alt=media&token=c53f7b56-6b52-4371-8824-916dc60ab55e',
+    title: 'ARGENTINA',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/AUSTRALIA.svg?alt=media&token=9dde0a5d-de7d-4267-8245-9eab05203318',
+    title: ' AUSTRALIA',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/USA.svg?alt=media&token=babb740f-c609-4d39-bb8a-d1c56a0e75aa',
+    title: ' USA',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ESPANA.svg?alt=media&token=8f83ddb9-b782-4640-b0eb-f40d143b9b3f',
+    title: 'SPAIN',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/JAPON.svg?alt=media&token=d558257d-5225-45a3-b9da-b1de34cbcd20',
+    title: 'JAPAN',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/COLOMBIA.svg?alt=media&token=94b953e6-048d-4aa5-bacc-8ea46159b4a5',
+    title: 'COLOMBIA',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/FRANCE.svg?alt=media&token=ab5578e4-3bf0-42b3-9e4d-d8a8fb6f99be',
+    title: 'FRANCE',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/REINO-UNIDO.svg?alt=media&token=9a980457-f9f6-47db-85c1-ec200f06a7e3',
+    title: 'UNITED KINGDOM',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/CHINA.svg?alt=media&token=6922471b-eb63-44c3-85f8-219d68bdc1e5',
+    title: 'CHINA',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/BRASIL.svg?alt=media&token=7aad24d7-94ea-4fc2-9a0c-ec5f12b20f9d',
+    title: 'BRAZIL',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ITALIA.svg?alt=media&token=3759b68e-ff24-4584-9869-bde5e788372a',
+    title: 'ITALY',
+  },
+  {
+    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/VENEZUELA.svg?alt=media&token=99eabfa0-b40e-4a09-8bd7-2d5df17e6b2d',
+    title: 'VENEZUELA',
+  }
+];
 
 function Home() {
   return (
@@ -31,7 +69,7 @@ function Home() {
             <div className="carousel-item active">
               <div className="row">
                 <div className="col">
-                  <img src={imgA} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[0].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -39,7 +77,7 @@ function Home() {
                   <p className='name-img'>ARGENTINA</p>
                 </div>
                 <div className="col">
-                  <img src={imgB} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[1].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -47,7 +85,7 @@ function Home() {
                   <p className='name-img'>AUSTRALIA</p>
                 </div>
                 <div className="col">
-                  <img src={imgC} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[2].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -55,7 +93,7 @@ function Home() {
                   <p className='name-img'>USA</p>
                 </div>
                 <div className="col">
-                  <img src={imgD} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[3].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -67,7 +105,7 @@ function Home() {
             <div className="carousel-item">
               <div className="row">
                 <div className="col">
-                  <img src={imgE} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[4].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -75,7 +113,7 @@ function Home() {
                   <p className='name-img'>JAPAN</p>
                 </div>
                 <div className="col">
-                  <img src={imgF} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[5].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -83,7 +121,7 @@ function Home() {
                   <p className='name-img'>COLOMBIA</p>
                 </div>
                 <div className="col">
-                  <img src={imgG} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[6].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -91,7 +129,7 @@ function Home() {
                   <p className='name-img'>FRANCE</p>
                 </div>
                 <div className="col">
-                  <img src={imgH} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[7].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -103,7 +141,7 @@ function Home() {
             <div className="carousel-item">
               <div className="row">
                 <div className="col">
-                  <img src={imgI} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[8].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -111,7 +149,7 @@ function Home() {
                   <p className='name-img'>CHINA</p>
                 </div>
                 <div className="col">
-                  <img src={imgJ} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[9].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -119,7 +157,7 @@ function Home() {
                   <p className='name-img'>BRAZIL</p>
                 </div>
                 <div className="col">
-                  <img src={imgK} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[10].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -127,7 +165,7 @@ function Home() {
                   <p className='name-img'>ITALY</p>
                 </div>
                 <div className="col">
-                  <img src={imgL} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[11].img} className="carousel-image" alt="Imagen 1" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
