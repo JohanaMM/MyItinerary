@@ -60,7 +60,6 @@ function CityDetails() {
                             <div className="Details overlayDitails">
                                 <section className='sectionInf'>
                                     <div className='items'>
-                                        {/* <p><FaCloudSun /> {city[0].weather}</p> */}
                                         <p><FaGlobe /> {city[0].language}</p>
                                         <p><FaDollarSign /> {city[0].currency}</p>
                                         <p><FaUsers /> {city[0].population}</p>

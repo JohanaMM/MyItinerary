@@ -4,6 +4,8 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
+import Checkbox from '@mui/material/Checkbox';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
@@ -12,9 +14,9 @@ import imgCardActivity from '../images/hero.jpeg'
 import Button from '@mui/material/Button';
 import { Link as LinkRouter } from 'react-router-dom';
 
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export default function RecipeReviewCard() {
-
+ function RecipeReviewCard() {
 
   return (
     <Card style={{
@@ -55,11 +57,16 @@ export default function RecipeReviewCard() {
         <AttachMoneyIcon />
       </div>
       <div className='buttonItinerary'>
-        <FavoriteIcon />
-        <LinkRouter to='/Itineraries'>
-                <Button variant="contained">Contained</Button>
+      <Checkbox
+        icon={<FavoriteBorderIcon sx={{ color: 'red' }} />}
+        checkedIcon={<FavoriteIcon sx={{ color: 'red' }} />}
+      />
+        <LinkRouter to='/Itineraries' >
+                <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'white' }}>Contained</Button>
         </LinkRouter>
       </div>
     </Card>
   );
 }
+
+export default RecipeReviewCard

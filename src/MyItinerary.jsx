@@ -4,6 +4,7 @@ import Hero from './component/Hero';
 import Cities from './component/Cities'
 import CityDetails from './component/CityDetails';
 import Itineraries from './component/Itineraries';
+import ShoppingCart from './component/ShoppingCart';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Routes, Route } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ function MyItinerary() {
           <Route path='/Cities' element={<Cities />}></Route>
           <Route path='/CityDetails/:id' element={<CityDetails />}></Route>
           <Route path='/Itineraries' element={<Itineraries />}></Route>
+          <Route path='/ShoppingCart' element={<ShoppingCart />}></Route>
           </Routes>
       </div>
   );

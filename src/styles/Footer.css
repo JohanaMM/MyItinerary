@@ -56,7 +56,14 @@
     font-weight: bolder;
 }
 
-p {
+.contact p {
+    text-decoration-line: none !important;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.politics p{
     text-decoration-line: none !important;
     cursor: pointer;
     font-size: 14px;
