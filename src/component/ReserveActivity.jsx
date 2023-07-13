@@ -6,7 +6,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import {FaCalendar, FaBan } from "react-icons/fa";
-
+import imgI from '../images/sammyI.png'
+import '../styles/Itineraries.css'
 
 function ReserveActivity(){
 
@@ -54,7 +55,7 @@ const total = pricePerAdult * numberOfPeople;
 
     return(
         <>
-                    <div className='reserve'>
+            <div className='reserve'>
                 <div>
                     <h2>TITLE</h2>
                     <div className='calendar'>
@@ -78,6 +79,7 @@ const total = pricePerAdult * numberOfPeople;
                         </LinkRouter>
                     </div>
                 </div> 
+                <img src={imgI} className='imgI' alt="" />
             </div>
         </>
     )

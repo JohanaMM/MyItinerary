@@ -9,6 +9,7 @@ import img3 from '../images/hero.jpeg'
 import AccordionActivity from './AccordionActivity'
 import { FaUserFriends, FaClock, FaGlobe } from "react-icons/fa";
 import ReserveActivity from './ReserveActivity';
+import imgI from '../images/sammyI.png'
 
 function Itineraries() {
 

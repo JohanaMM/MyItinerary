@@ -43,7 +43,7 @@ import { Link as LinkRouter } from 'react-router-dom';
           subheaderTypographyProps={{
             color: 'white',
           }}
-          title="Activity"
+          title="Username"
           subheader="September 14, 2016"
         />
       </CardContent>

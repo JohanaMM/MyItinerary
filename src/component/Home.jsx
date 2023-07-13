@@ -69,7 +69,7 @@ function Home() {
             <div className="carousel-item active">
               <div className="row">
                 <div className="col">
-                  <img src={imgCarousel[0].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[0].img} className="carousel-image" alt="img-ARGENTINA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -77,7 +77,7 @@ function Home() {
                   <p className='name-img'>ARGENTINA</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[1].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[1].img} className="carousel-image" alt="img-AUSTRALIA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -85,7 +85,7 @@ function Home() {
                   <p className='name-img'>AUSTRALIA</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[2].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[2].img} className="carousel-image" alt="imgUSA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -93,7 +93,7 @@ function Home() {
                   <p className='name-img'>USA</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[3].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[3].img} className="carousel-image" alt="img-SPAIN" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -105,7 +105,7 @@ function Home() {
             <div className="carousel-item">
               <div className="row">
                 <div className="col">
-                  <img src={imgCarousel[4].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[4].img} className="carousel-image" alt="img-JAPAN" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -113,7 +113,7 @@ function Home() {
                   <p className='name-img'>JAPAN</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[5].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[5].img} className="carousel-image" alt="img-COLOMBIA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -121,7 +121,7 @@ function Home() {
                   <p className='name-img'>COLOMBIA</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[6].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[6].img} className="carousel-image" alt="img-FRANCE" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -129,7 +129,7 @@ function Home() {
                   <p className='name-img'>FRANCE</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[7].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[7].img} className="carousel-image" alt="img-UNITEDKINGDOM" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -141,7 +141,7 @@ function Home() {
             <div className="carousel-item">
               <div className="row">
                 <div className="col">
-                  <img src={imgCarousel[8].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[8].img} className="carousel-image" alt="img-CHINA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -149,7 +149,7 @@ function Home() {
                   <p className='name-img'>CHINA</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[9].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[9].img} className="carousel-image" alt="img-BRAZIL" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -157,7 +157,7 @@ function Home() {
                   <p className='name-img'>BRAZIL</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[10].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[10].img} className="carousel-image" alt="img-ITALY" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 
@@ -165,7 +165,7 @@ function Home() {
                   <p className='name-img'>ITALY</p>
                 </div>
                 <div className="col">
-                  <img src={imgCarousel[11].img} className="carousel-image" alt="Imagen 1" style={{
+                  <img src={imgCarousel[11].img} className="carousel-image" alt="img-VENEZUELA" style={{
                     backgroundSize: '100%',
                     borderRadius: '10px',
 

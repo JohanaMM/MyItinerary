@@ -7,10 +7,10 @@ import reportWebVitals from './reportWebVitals';
 import '@mui/material/styles';
 
 
-ReactDOM.createRoot(document.querySelector("#root")).render(
+ReactDOM.render(
   <BrowserRouter>
     <StyledEngineProvider injectFirst>
-        <MyItinerary />
+      <MyItinerary />
     </StyledEngineProvider>
   </BrowserRouter>,
   document.getElementById('root')
