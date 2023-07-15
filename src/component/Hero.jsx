@@ -6,17 +6,17 @@ import Navbar from './Navbar'
 function Hero() {
     return (
         <>
-         <Navbar />
-        <div className='pagP'>
-            <div className='C-Text'>
-                <span className='imgL' />
-                <h1 className='textC'>Find your perfect trip designed by insiders who know and love their cities</h1>
-                <LinkRouter to={"/Home"}>
-                    <p className='animation button'>GET INSPIRED</p>
-                </LinkRouter>
+            <Navbar />
+            <div className='pagP'>
+                <div className='C-Text'>
+                    <span className='imgL' />
+                    <h1 className='textC'>Find your perfect trip designed by insiders who know and love their cities</h1>
+                    <LinkRouter to={"/Home"}>
+                        <p className='animation button'>GET INSPIRED</p>
+                    </LinkRouter>
+                </div>
             </div>
-        </div>
-        <section className="iconsHero">
+            <section className="iconsHero">
                 <ul>
                     <li className="instagram">
                         <FaInstagram />
@@ -36,6 +36,7 @@ function Hero() {
                 <p className="copyR-Hero">Copyright&copy; My Itinerary - All rights reserved</p>
             </div>
         </>
+
     )
 }
 

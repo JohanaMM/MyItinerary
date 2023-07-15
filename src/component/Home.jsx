@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import { FaPlaneDeparture } from 'react-icons/fa';
 import { Link as LinkRouter } from 'react-router-dom'
-import Navbar from './Navbar'
+import Navbar from './Navbar';
 import Footer from './Footer'
 
 const imgCarousel = [

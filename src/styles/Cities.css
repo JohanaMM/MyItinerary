@@ -241,7 +241,8 @@ input[type="search"] {
         flex-direction: column-reverse;
     }
 
-    select{
+    select,
+    ::placeholder{
         font-size: 12px;
     }
 
@@ -260,5 +261,24 @@ input[type="search"] {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .searchFilters{
+        flex-direction: column-reverse;
+    }
 
+    select,
+    ::placeholder{
+        font-size: 14px;
+    }
+
+    .select {
+        width: 25em;
+        height: 2em;
+        margin-top: 10px;
+    }
+
+    input[type="search"] {
+        width: 25em;
+        height: 2em;
+
+    }
 }

@@ -57,7 +57,7 @@ const total = pricePerAdult * numberOfPeople;
         <>
             <div className='reserve'>
                 <div>
-                    <h2>TITLE</h2>
+                    <h3>Reserve it</h3>
                     <div className='calendar'>
                         <DatePicker
                             selected={selectedDate}

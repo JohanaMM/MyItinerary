@@ -4,27 +4,34 @@ import { FaAngleDown, FaAngleLeft, FaGlobe, FaDollarSign, FaUsers, FaAngleUp } f
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 import { Link as LinkRouter } from 'react-router-dom'
-import CardsItinerary from './CardItinerary'
+import CardItinerary from './CardItinerary'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
 function CityDetails() {
-
     const [isExpanded, setIsExpanded] = useState(false);
-    
-    const [city, setCity] = useState([])
+    const [city, setCity] = useState([]);
+    const [itineraries, setItineraries] = useState([]);
 
-    const { id } = useParams()
+    const { id } = useParams();
 
     async function getCity(id) {
-        let cityDB
-        cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
+            const cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
+            setCity(cityDB.data.response);
+    }
 
-        setCity(cityDB.data.response);
+    async function getItineraries(idCity) {
+            const itinerariesDB = await axios.get("http://localhost:4001/api/itineraries/cities/" + idCity);
+            setItineraries(itinerariesDB.data.response);
     }
 
     useEffect(() => {
-        getCity(id)
-    }, [])
-
+        getCity(id);
+        getItineraries(id);
+    }, [id]);
 
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
@@ -46,7 +53,7 @@ function CityDetails() {
                         <div className="overlayDitails">
                             <LinkRouter to='/Cities'>
                                 <span className='backCities' onClick={handleToggle}>
-                                <FaAngleLeft fontSize='30px' /> Back to cities
+                                    <FaAngleLeft fontSize='30px' /> Back to cities
                                 </span>
                             </LinkRouter>
                             <p className='title'>{city[0].name}</p>
@@ -72,13 +79,23 @@ function CityDetails() {
                                     <div>
                                         <p className='titleActivities'>Itineraries</p>
                                     </div>
-                                    <div className='containerCArds'>
-                                        <CardsItinerary/>
-                                        <CardsItinerary/>
-                                        <CardsItinerary/>
-                                        <div className='up'>
-                                            <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
-                                        </div>
+                                        <Swiper
+                                            cssMode={true}
+                                            navigation={true}
+                                            pagination={true}
+                                            mousewheel={true}
+                                            keyboard={true}
+                                            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                            className="mySwiper"
+                                        >
+                                            <SwiperSlide key={itineraries._id}>
+                                                {itineraries.map((itinerary) => (
+                                                    <CardItinerary key={itinerary._id} itinerary={itinerary} />
+                                                ))}
+                                            </SwiperSlide>
+                                        </Swiper>
+                                    <div className='up'>
+                                        <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
                                     </div>
                                 </section>
                             </div>
@@ -86,7 +103,7 @@ function CityDetails() {
                     </div >
                     :
                     <h1> </h1>
-            }
+                }
         </>
     );
 }

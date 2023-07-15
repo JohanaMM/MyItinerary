@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { StyledEngineProvider} from '@mui/material/styles';
+import { StyledEngineProvider } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 import MyItinerary from './MyItinerary';
 import reportWebVitals from './reportWebVitals';
 import '@mui/material/styles';
 
-
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <StyledEngineProvider injectFirst>
       <MyItinerary />
     </StyledEngineProvider>
-  </BrowserRouter>,
-  document.getElementById('root')
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

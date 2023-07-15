@@ -77,6 +77,10 @@ h5 {
     font-weight: bolder;
 }
 
+.about h2{
+    text-align: left;
+}
+
 .more-information {
     width: 100%;
     margin-top: 40px;
@@ -94,10 +98,10 @@ h5 {
     padding: 0px 15px;
 }
 
-.reserve h2 {
+.reserve h3 {
     text-align: center;
     color: black;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .reserve h6 {
@@ -126,8 +130,12 @@ h5 {
     color: black;
 }
 
+.react-datepicker__input-container {
+    width: 112% !important;
+}
+
 .calendar {
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 
@@ -135,13 +143,13 @@ h5 {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     .titleItinerary {
         margin-top: 180px;
     }
 
     .cont-activity-img {
-        height: 30vh;
+        height: 40vh;
     }
 
     .booking-info {
@@ -166,7 +174,8 @@ h5 {
         margin-top: 30px;
     }
 
-    .custom-input {
-        width: 117%;
+    .calendar {
+        width: 78%;
+        height: auto;
     }
 }

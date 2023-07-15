@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Título del Proyecto</title>
+    <title>MyTinerary</title>
 </head>
 <body>
     <h1>My Itinerary</h1>
@@ -14,7 +14,7 @@
     <ul>
         <li>Johana Martinez</li>
         <li>Mairene Villasmil</li>
-        <li>Lucianop Rivas</li>
+        <li>Luciano Rivas</li>
   </ul>
     
     <p>Derechos Reservados</p>

@@ -64,7 +64,6 @@ function Cities() {
               >
                 <div className="overlay">
                   <div className='punctuation'><FaStar color='#ffff29' /> 4.8</div>
-                  {/* <div className="likeButton"><FaHeart /></div> */}
                   <div className="infCountry">
                     <p className="titleLocation">{city.name}</p>
                     <p className="nameCountry"><FaMapPin /> {city.country}</p>

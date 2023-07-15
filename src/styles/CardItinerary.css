@@ -14,3 +14,7 @@
     justify-content: space-between;
     margin: 0 5px;
 }
+
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: inherit !important;
+}
