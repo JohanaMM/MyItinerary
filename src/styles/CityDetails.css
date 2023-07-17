@@ -118,7 +118,7 @@
 
 .activities {
     width: 100vw;
-    height: 40vh;
+    height: 42vh;
     position: relative;
 }
 
@@ -130,11 +130,12 @@
     margin-top: 20px;
     position: relative;
     color: white;
+    height: 50px;
 }
 
 .swiper {
     width: 80%;
-    height: 120%;
+    height: 110%;
 }
 
 .swiper-slide {
@@ -153,7 +154,7 @@
     color: black;
     cursor: pointer;
     right: 0%;
-    bottom: 20%;
+    bottom: 0%;
 
 }
 
@@ -192,7 +193,11 @@
 
     .titleActivities {
         font-size: 25px;
-        height: 25px;
+        height: 0px;
+    }
+
+    .activities{
+        height: 36vh;
     }
 
 }
@@ -209,7 +214,7 @@
 
     .sectionInf {
         flex-direction: column-reverse;
-        height: 50vh;
+        height: 47vh;
     }
 
     .description {
@@ -221,7 +226,11 @@
     }
 
     .items p {
-        font-size: 20px;
+        font-size: 17px;
+    }
+
+    .activities{
+        height: 36vh;
     }
 
     .titleActivities {
@@ -244,6 +253,11 @@
 
     .description p {
         font-size: 14px;
+    }
+
+    .swiper {
+        width: 80%;
+        height: 90%;
     }
 
 

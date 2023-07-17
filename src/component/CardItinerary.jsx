@@ -3,6 +3,8 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -11,79 +13,103 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import '../styles/CardItinerary.css'
 import Button from '@mui/material/Button';
 import { Link as LinkRouter } from 'react-router-dom';
+import { useMediaQuery } from '@mui/material';
 import axios from 'axios';
 
-
 function CardItinerary() {
+  const [itinerary, setItinerary] = useState({});
 
-  const [itineraries, setItineraries] = useState([])
-
-  async function getDataI() {
-    const itinerariesDB = await axios.get("http://localhost:4001/api/itineraries")
-    setItineraries(itinerariesDB.data.response.itineraries)
-    console.log(itinerariesDB)
+  async function getDataI(idCity) {
+    const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries");
+    setItinerary(itinerariesDB.data.response.itineraries[0]);
+    console.log(itinerariesDB);
   }
 
   useEffect(() => {
     getDataI();
   }, []);
 
+  const isSmallScreen = useMediaQuery('(max-width: 760px)');
+
   return (
     <>
-      {itineraries.length > 0 ?
-        <Card style={{
-          width: '60%',
-          maxHeight: '270px',
-          margin: '20px'
-        }}>
-          <CardContent style={{
-            height: '180px',
-            backgroundImage: `url(${itineraries.imageItineraryA})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: '100% 100%',
-            backgroundSize: 'cover',
-          }}>
-            <CardHeader
+      {Object.keys(itinerary).length > 0 ? (
+        <div className='overlayCard'>
+          <Card
+            sx={{
+              width: isSmallScreen ? '300px' : '600px',
+              height: isSmallScreen ? '300px' : '300px',
+              display: 'flex',
+              backgroundImage: `url(${itinerary.imageItineraryA})`,
+              backgroundPosition: '100% 100%',
+              backgroundSize: 'cover',
+              color: 'white',
+            }}
+          >
+            <div className='overlayCard'>
+              <Avatar
+                sx={{
+                  width: 60,
+                  height: 60,
+                  marginRight: 2,
+                  boxShadow: '0 0 5px rgba(0, 0, 0, 0.3)',
+                }}
+                alt="Avatar"
+                src={itinerary.profileImage}
+              />
+              <CardHeader
+                title={itinerary.collaborator}
+                sx={{
+                  paddingTop: 1,
+                  paddingBottom: 0,
+                  fontSize: '1rem',
+                }}
+              />
+              <CardContent>
+                <Typography variant="h6" sx={{ fontSize: '1rem' }}>{itinerary.titleActivity}</Typography>
+                <Typography variant="subtitle1" sx={{ fontSize: '0.9rem' }}>
+                  <AccessTimeIcon sx={{ marginRight: 1 }} />
+                  {itinerary.time}
+                </Typography>
+                <Typography variant="subtitle1" sx={{ fontSize: '0.9rem' }}>
+                  <AttachMoneyIcon sx={{ marginRight: 1 }} />
+                  {itinerary.price}
+                </Typography>
+                <Typography variant="body2" sx={{ fontSize: '0.9rem' }}>{itinerary.hashtag}</Typography>
+              </CardContent>
+              <CardActions sx={{ justifyContent: 'space-between' }}>
+                <label htmlFor="">
+                  <Checkbox
+                    icon={<FavoriteBorderIcon sx={{ color: 'red' }} />}
+                    checkedIcon={<FavoriteIcon sx={{ color: 'red' }} />}
+                  />
+                  {itinerary.likes}
+                </label>
+                <LinkRouter to="/Itineraries/cities/:idCity">
+                  <Button variant="contained" color="primary">
+                    Details
+                  </Button>
+                </LinkRouter>
+              </CardActions>
+            </div>
+            <div
               sx={{
-                height: '50px',
-                bgcolor: 'rgba(0, 0, 0, 0.5)',
-                color: 'white',
+                position: 'absolute',
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                backgroundColor: '#0000009f',
               }}
-              avatar={
-                <Avatar alt="Remy Sharp" src={itineraries.profileImage} />
-              }
-              titleTypographyProps={{
-                color: 'white',
-              }}
-              subheaderTypographyProps={{
-                color: 'white',
-              }}
-              title={itineraries.collaborator}
-            />
-          </CardContent>
-          <div className='itemsCard'>
-            <p>{itineraries.titleActivity}</p>
-            <AccessTimeIcon /> {itineraries.time}
-            <AttachMoneyIcon /> {itineraries.price}
-            {itineraries.hashtag}
-          </div>
-          <div className='buttonItinerary'>
-            <Checkbox
-              icon={<FavoriteBorderIcon sx={{ color: 'red' }} />}
-              checkedIcon={<FavoriteIcon sx={{ color: 'red' }} />}
-            />{itineraries.likes}
-            <LinkRouter to="/Itineraries/cities/:idCity">
-              <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'white' }}>Contained</Button>
-            </LinkRouter>
-          </div>
-        </Card>
-        :
-        <h1> </h1>
+            ></div>
+          </Card >
+        </div>
+      ) : (
+        <h1>Very soon you will find the itineraries available for this city</h1>
+      )
       }
-
     </>
-
   );
 }
 
-export default CardItinerary
+export default CardItinerary;

@@ -19,13 +19,13 @@ function CityDetails() {
     const { id } = useParams();
 
     async function getCity(id) {
-            const cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
-            setCity(cityDB.data.response);
+        const cityDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities/" + id);
+        setCity(cityDB.data.response);
     }
 
     async function getItineraries(idCity) {
-            const itinerariesDB = await axios.get("http://localhost:4001/api/itineraries/cities/" + idCity);
-            setItineraries(itinerariesDB.data.response);
+        const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/cities/" + idCity);
+        setItineraries(itinerariesDB.data.response);
     }
 
     useEffect(() => {
@@ -79,31 +79,32 @@ function CityDetails() {
                                     <div>
                                         <p className='titleActivities'>Itineraries</p>
                                     </div>
-                                        <Swiper
-                                            cssMode={true}
-                                            navigation={true}
-                                            pagination={true}
-                                            mousewheel={true}
-                                            keyboard={true}
-                                            modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                                            className="mySwiper"
-                                        >
-                                            <SwiperSlide key={itineraries._id}>
-                                                {itineraries.map((itinerary) => (
-                                                    <CardItinerary key={itinerary._id} itinerary={itinerary} />
-                                                ))}
+                                    <Swiper
+                                        cssMode={true}
+                                        navigation={true}
+                                        pagination={true}
+                                        mousewheel={true}
+                                        keyboard={true}
+                                        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                        className="mySwiper"
+                                    >
+                                        {itineraries.map((itinerary) => (
+                                            <SwiperSlide key={itinerary._id}>
+                                                <CardItinerary itinerary={itinerary} />
                                             </SwiperSlide>
-                                        </Swiper>
+                                        ))}
+                                    </Swiper>
                                     <div className='up'>
                                         <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
                                     </div>
                                 </section>
+
                             </div>
                         )}
                     </div >
                     :
                     <h1> </h1>
-                }
+            }
         </>
     );
 }
