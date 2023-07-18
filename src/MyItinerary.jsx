@@ -10,17 +10,17 @@ import { Routes, Route } from 'react-router-dom';
 
 function MyItinerary() {
   return (
-      <div>
-        <Routes>
+    <div>
+      <Routes>
         <Route path='*' element={<Home />}></Route>
-          <Route path='' element={<Hero />}></Route>
-          <Route path='/Home' element={<Home />}></Route>
-          <Route path='/Cities' element={<Cities />}></Route>
-          <Route path='/CityDetails/:id' element={<CityDetails />}></Route>
-          <Route path='/Itineraries' element={<Itineraries />}></Route>
-          <Route path='/ShoppingCart' element={<ShoppingCart />}></Route>
-          </Routes>
-      </div>
+        <Route path='' element={<Hero />}></Route>
+        <Route path='/Home' element={<Home />}></Route>
+        <Route path='/Cities' element={<Cities />}></Route>
+        <Route path='/CityDetails/:id' element={<CityDetails />}></Route>
+        <Route path='/Itineraries/:id' element={<Itineraries />}></Route>
+        <Route path='/ShoppingCart' element={<ShoppingCart />}></Route>
+      </Routes>
+    </div>
   );
 }
 

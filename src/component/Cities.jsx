@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../styles/Cities.css';
 import Footer from './Footer';
-import { FaMapPin, FaHeart, FaStar, FaAngleUp } from 'react-icons/fa';
+import { FaMapPin, FaStar, FaAngleUp } from 'react-icons/fa';
 import axios from 'axios';
 import { Link as LinkRouter } from 'react-router-dom';
 import Navbar from './Navbar';
@@ -64,7 +64,6 @@ function Cities() {
               >
                 <div className="overlay">
                   <div className='punctuation'><FaStar color='#ffff29' /> 4.8</div>
-                  <div className="likeButton"><FaHeart /></div>
                   <div className="infCountry">
                     <p className="titleLocation">{city.name}</p>
                     <p className="nameCountry"><FaMapPin /> {city.country}</p>
