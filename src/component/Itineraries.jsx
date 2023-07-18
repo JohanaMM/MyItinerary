@@ -9,44 +9,46 @@ import ReserveActivity from './ReserveActivity';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-
 function Itineraries() {
+
+    const [itineraries, setItineraries] = useState({});
 
     const { id } = useParams();
 
-    const [itineraries, setItineraries] = useState([]);
     async function getItineraries(id) {
-        const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/cities/" + id);
-        setItineraries(itinerariesDB.data.response.itineraries);
-        console.log(itinerariesDB);
+        const itineraryDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/" + id)
+        setItineraries(itineraryDB.data.response)
+
     }
 
     useEffect(() => {
         getItineraries(id);
-    }, [id]);
+    }, []);
 
     return (
         <>
+            <Navbar />
             {
-                itineraries.length > 0 ? (
+                Object.keys(itineraries).length > 0 ?
+
                     <div>
-                        <Navbar />
+
 
                         <div>
-                            <p className='titleItinerary'>{itineraries[0].titleActivity}</p>
+                            <p className='titleItinerary'>{itineraries.titleActivity}</p>
                         </div>
 
                         <div className="body">
                             <div className='cont-activity-img'>
                                 <div className='containerImg'>
-                                    <img src={itineraries[0].imageItineraryA} className='imgActivity' alt="actividadUno" />
+                                    <img src={itineraries.imageItineraryA} className='imgActivity' alt="actividadUno" />
                                 </div>
                                 <div className='container-Img'>
                                     <div className='container-Img-'>
-                                        <img src={itineraries[0].imageItineraryB} className='imgActivity' alt="actividadDos" />
+                                        <img src={itineraries.imageItineraryB} className='imgActivity' alt="actividadDos" />
                                     </div>
                                     <div className='container-Img_'>
-                                        <img src={itineraries[0].imageItineraryC} className='imgActivity' alt="actividadTres" />
+                                        <img src={itineraries.imageItineraryC} className='imgActivity' alt="actividadTres" />
                                     </div>
 
                                 </div>
@@ -56,10 +58,11 @@ function Itineraries() {
                             <div className='information'>
                                 <div className='about'>
                                     <h3>About</h3>
-                                    <span>{itineraries[0].description}</span>
-                                    <p><FaDollarSign size='30px' color='white' /> from {itineraries[0].price} per adult</p> <br />
-                                    <p><FaUserFriends size='30px' color='white' /> Ages 5-75, max 9 people per group</p>
-                                    <p><FaClock size='30px' color='white' /> {itineraries[0].time}</p>
+                                    <span>{itineraries.description}</span> <br />
+                                    <br />
+                                    <p><FaDollarSign size='30px' color='white' /> from {itineraries.price} per adult</p> 
+                                    <p><FaUserFriends size='30px' color='white' /> Ages {itineraries.years}, max 16 people per group</p>
+                                    <p><FaClock size='30px' color='white' /> {itineraries.time}</p>
                                     <p><FaGlobe size='30px' color='white' /> English, Spanish</p>
                                 </div>
                                 <div className='more-information'>
@@ -68,12 +71,17 @@ function Itineraries() {
                             </div>
                             <ReserveActivity />
                         </div>
-                        <Footer />
+
                     </div>
-                ) : <h1></h1>
+                    :
+                    <div className='loadingI'>
+                        <h1>Loading...</h1>
+                    </div>
             }
+            <Footer />
         </>
     );
 }
 
 export default Itineraries;
+

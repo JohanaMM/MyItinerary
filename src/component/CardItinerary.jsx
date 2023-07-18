@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
@@ -14,31 +14,20 @@ import '../styles/CardItinerary.css'
 import Button from '@mui/material/Button';
 import { Link as LinkRouter } from 'react-router-dom';
 import { useMediaQuery } from '@mui/material';
-import axios from 'axios';
 
-function CardItinerary() {
-  const [itinerary, setItinerary] = useState({});
+function CardItinerary(prop) {
 
-  async function getDataI(idCity) {
-    const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries");
-    setItinerary(itinerariesDB.data.response.itineraries[0]);
-    console.log(itinerariesDB);
-  }
-
-  useEffect(() => {
-    getDataI();
-  }, []);
-
+  let itinerary = prop.itinerary
   const isSmallScreen = useMediaQuery('(max-width: 760px)');
 
   return (
     <>
-      {Object.keys(itinerary).length > 0 ? (
+    
         <div className='overlayCard'>
           <Card
             sx={{
               width: isSmallScreen ? '300px' : '600px',
-              height: isSmallScreen ? '300px' : '300px',
+              height: isSmallScreen ? '330px' : '300px',
               display: 'flex',
               backgroundImage: `url(${itinerary.imageItineraryA})`,
               backgroundPosition: '100% 100%',
@@ -85,7 +74,7 @@ function CardItinerary() {
                   />
                   {itinerary.likes}
                 </label>
-                <LinkRouter to="/Itineraries/cities/:idCity">
+                <LinkRouter to={"/Itineraries/"+itinerary._id}>
                   <Button variant="contained" color="primary">
                     Details
                   </Button>
@@ -104,10 +93,7 @@ function CardItinerary() {
             ></div>
           </Card >
         </div>
-      ) : (
-        <h1>Very soon you will find the itineraries available for this city</h1>
-      )
-      }
+  
     </>
   );
 }

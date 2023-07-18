@@ -1,12 +1,18 @@
 import '../styles/Hero.css'
 import { Link as LinkRouter } from 'react-router-dom'
-import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa"
 import Navbar from './Navbar'
+import Footer from './Footer'
+import imgHero from '../images/hero.jpeg'
 
 function Hero() {
     return (
-        <>
-            <Navbar />
+        <div style={{
+            backgroundImage: `url(${imgHero})`,
+            backgroundRepeat: 'no-repeat',
+
+            backgroundSize: 'cover',
+          }}>
+            <Navbar/>
             <div className='pagP'>
                 <div className='C-Text'>
                     <span className='imgL' />
@@ -16,26 +22,8 @@ function Hero() {
                     </LinkRouter>
                 </div>
             </div>
-            <section className="iconsHero">
-                <ul>
-                    <li className="instagram">
-                        <FaInstagram />
-                    </li>
-                    <li className="facebook">
-                        <FaFacebook />
-                    </li>
-                    <li className="twitter">
-                        <FaTwitter />
-                    </li>
-                    <li className="youtube">
-                        <FaYoutube />
-                    </li>
-                </ul>
-            </section>
-            <div className='copyHero'>
-                <p className="copyR-Hero">Copyright&copy; My Itinerary - All rights reserved</p>
-            </div>
-        </>
+            <Footer/>
+        </div>
 
     )
 }

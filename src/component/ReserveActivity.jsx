@@ -9,7 +9,7 @@ import {FaCalendar, FaBan } from "react-icons/fa";
 import imgI from '../images/sammyI.png'
 import '../styles/Itineraries.css'
 
-function ReserveActivity(){
+function ReserveActivity({}){
 
 const [selectedDate, setSelectedDate] = useState(null);
 // en este hook se almacenan los datos que se seleccionan del calendario
@@ -48,10 +48,7 @@ const CustomInput = ({ value, onClick }) => (
 //DatePicker se instalo y fue como incluimos el calendario y se le aplica la condicion que si no hay valor muestra 
 //un mensaje para indicar que hay que seleccionar una fecha
 
-const pricePerAdult = 5; 
-//en esta constante se va a almacenar el precio de cada actividad desde la DB
-const total = pricePerAdult * numberOfPeople;
-//para calcular el total hacemos una multiplicacion de precio con el numero de personas
+
 
     return(
         <>
@@ -71,7 +68,6 @@ const total = pricePerAdult * numberOfPeople;
                     </div>
                     <h6 className='cancellation'><FaBan color='white' /> This package adheres to our cancellation policy</h6>
                     <div className='trolley'>
-                        <span>Total: {total}</span>
                         <LinkRouter to='/ShoppingCart'>
                             <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'white' }}>
                                 Add to cart <AddShoppingCartIcon />

@@ -27,7 +27,6 @@ function CityDetails() {
         const itinerariesDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/cities/" + idCity);
         setItineraries(itinerariesDB.data.response);
     }
-
     useEffect(() => {
         getCity(id);
         getItineraries(id);
@@ -79,21 +78,30 @@ function CityDetails() {
                                     <div>
                                         <p className='titleActivities'>Itineraries</p>
                                     </div>
-                                    <Swiper
-                                        cssMode={true}
-                                        navigation={true}
-                                        pagination={true}
-                                        mousewheel={true}
-                                        keyboard={true}
-                                        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                                        className="mySwiper"
-                                    >
-                                        {itineraries.map((itinerary) => (
-                                            <SwiperSlide key={itinerary._id}>
-                                                <CardItinerary itinerary={itinerary} />
-                                            </SwiperSlide>
-                                        ))}
-                                    </Swiper>
+                                    {
+                                        itineraries.length > 0 ?
+                                            <Swiper
+                                                cssMode={true}
+                                                navigation={true}
+                                                pagination={true}
+                                                mousewheel={true}
+                                                keyboard={true}
+                                                modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                                                className="mySwiper"
+                                            >
+
+
+                                                {itineraries.map((itinerary) => (
+
+                                                    <SwiperSlide key={itinerary._id}>
+                                                        <CardItinerary itinerary={itinerary} />
+                                                    </SwiperSlide>
+                                                ))}
+                                            </Swiper>
+                                            : <div className='zeroResult'>
+                                                <h3 className='animationR'>Very soon you will find the itineraries available for this city</h3>
+                                            </div>
+                                    }
                                     <div className='up'>
                                         <a href="#upDitails" className='buttonUp'><FaAngleUp /></a>
                                     </div>

@@ -1,7 +1,6 @@
 *{
     padding: 0px;
     margin: 0px;
-    font-family: "Lucida Console", Monaco, monospace;
 }
 
 .bodyCountry {
@@ -20,7 +19,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     position: relative;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .infCountry {
@@ -39,7 +38,7 @@
 
 .searchFilters {
     width: 100%;
-    margin-top: 150px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -63,7 +62,6 @@ select {
     background-image: none;
     cursor: pointer;
     font-size: 18px;
-    font-family: "Lucida Console", Monaco, monospace;
 }
 
 select::-ms-expand {
@@ -100,12 +98,10 @@ input[type="search"] {
     background-color: rgba(26, 31, 56, 0.541);
     margin: 0px 15px;
     border-radius: 5px;
-    font-family: "Lucida Console", Monaco, monospace;
 }
 
 ::placeholder {
     color: rgba(255, 255, 255, 0.534);
-    font-family: "Lucida Console", Monaco, monospace;
 }
 
 .cardCities{

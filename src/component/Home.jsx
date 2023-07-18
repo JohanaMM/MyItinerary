@@ -63,6 +63,12 @@ function Home() {
     <div>
       <Navbar />
       <div className="carousel-container">
+      <div className='CallTo'>
+        <h4>Where will your next adventure be?</h4>
+        <LinkRouter to={"/Cities"}>
+          <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
+        </LinkRouter>
+      </div>
         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
           <h2>Popular MYtineraries</h2>
           <div className="carousel-inner">
@@ -184,12 +190,6 @@ function Home() {
             <span className="visually-hidden">Siguiente</span>
           </button>
         </div>
-      </div>
-      <div className='CallTo'>
-        <h3>Where will your next adventure be?</h3>
-        <LinkRouter to={"/Cities"}>
-          <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
-        </LinkRouter>
       </div>
       <Footer />
     </div>
