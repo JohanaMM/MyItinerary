@@ -176,16 +176,16 @@ input[type="search"] {
     left: 10px;
 }
 
-.titleLocation {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .nameCountry {
     font-size: 16px;
     display: flex;
     align-items: center;
     margin-top: 25px;
+}
+
+.titleLocation {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .nameCountry svg {
