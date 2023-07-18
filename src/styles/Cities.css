@@ -47,7 +47,7 @@
 
 :root {
     --gray: #29292983;
-    --darkgray: #2c3e50;
+    --darkgray: #333b87;;
 }
 
 select {
@@ -77,31 +77,35 @@ select::-ms-expand {
     overflow: hidden;
 }
 
+option{
+    width: 30em;
+}
+
 .select::after {
     content: '\25BC';
     position: absolute;
     top: 0;
     right: 0;
     padding: 1em;
-    background-color: #29292967;
+    background-color: #0e17649d;
     transition: .25s all ease;
     pointer-events: none;
 }
 
 .select:hover::after {
-    color: #12c6f3;
+    color: #009D71;
 }
 
 input[type="search"] {
     width: 28em;
     height: 2.5em;
-    background-color: rgba(26, 31, 56, 0.541);
+    background-color: #0e17649d;
     margin: 0px 15px;
     border-radius: 5px;
 }
 
 ::placeholder {
-    color: rgba(255, 255, 255, 0.534);
+    color: rgb(255, 255, 255);
 }
 
 .cardCities{
@@ -248,6 +252,10 @@ input[type="search"] {
         margin-top: 10px;
     }
 
+    option{
+        width: 20em;
+    }
+
     input[type="search"] {
         width: 20em;
         height: 2em;
@@ -270,6 +278,10 @@ input[type="search"] {
         width: 25em;
         height: 2em;
         margin-top: 10px;
+    }
+
+    option{
+        width: 25em;
     }
 
     input[type="search"] {

@@ -51,7 +51,7 @@
 
 .navDos p {
     color: white;
-    font-size: 20px;
+    font-size: 19px;
     text-decoration-line: none;
     text-align: left;
     font-weight: bolder;
@@ -60,14 +60,14 @@
 .contact p {
     text-decoration-line: none !important;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
 }
 
 .politics p{
     text-decoration-line: none !important;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
 }
 

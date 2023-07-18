@@ -9,7 +9,7 @@ import {FaCalendar, FaBan } from "react-icons/fa";
 import imgI from '../images/sammyI.png'
 import '../styles/Itineraries.css'
 
-function ReserveActivity({}){
+function ReserveActivity(){
 
 const [selectedDate, setSelectedDate] = useState(null);
 // en este hook se almacenan los datos que se seleccionan del calendario

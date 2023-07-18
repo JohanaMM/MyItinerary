@@ -47,6 +47,7 @@
     background-color: white;
     color: black;
     cursor: pointer;
+    margin: 20px;
 }
 
 .buttonDetails {
@@ -163,7 +164,7 @@
     bottom: -2px;
     width: 100%;
     height: 4px;
-    background-color: #990606b4;
+    background-color: #37023de1;
     animation: underline-glow 2s linear infinite;
   }
   
@@ -183,6 +184,8 @@
     .title {
         top: 20%;
         font-size: 2em;
+        height: 0vh;
+        margin-top: 200px;
     }
 
     .buttonDetails {
@@ -219,6 +222,10 @@
 
     .activities{
         height: 44vh;
+    }
+
+    .animationR{
+        text-align: center;
     }
 
 }

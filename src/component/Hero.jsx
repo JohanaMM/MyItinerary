@@ -22,7 +22,10 @@ function Hero() {
                     </LinkRouter>
                 </div>
             </div>
-            <Footer/>
+            <div >
+                 <Footer/>
+            </div>
+           
         </div>
 
     )
