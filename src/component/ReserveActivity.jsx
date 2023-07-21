@@ -9,7 +9,7 @@ import {FaCalendar, FaBan } from "react-icons/fa";
 import imgI from '../images/sammyI.png'
 import '../styles/Itineraries.css'
 
-function ReserveActivity({}){
+function ReserveActivity(){
 
 const [selectedDate, setSelectedDate] = useState(null);
 // en este hook se almacenan los datos que se seleccionan del calendario
@@ -34,11 +34,11 @@ const handleIncrement = () => {
 
 const CustomInput = ({ value, onClick }) => (
     <div className="custom-input">
-        <span>Number of people: </span>
+        <span  style={{color:'#3a0868'}}>Number of people: </span>
         <Button onClick={handleDecrement}><RemoveCircleIcon sx={{ color: 'white' }}/></Button>
-        <span>{numberOfPeople}</span>
+        <span  style={{color:'#3a0868'}}>{numberOfPeople}</span>
         <Button onClick={handleIncrement}><AddCircleIcon sx={{ color: 'white' }}/></Button>
-        <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'white' }}>
+        <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight:'bold' }}>
             {value || 'Select a date'}
         </Button>
     </div>
@@ -54,7 +54,7 @@ const CustomInput = ({ value, onClick }) => (
         <>
             <div className='reserve'>
                 <div>
-                    <h3>Reserve it</h3>
+                    <h3 style={{color:'#3a0868'}}>Reserve it</h3>
                     <div className='calendar'>
                         <DatePicker
                             selected={selectedDate}
@@ -62,14 +62,14 @@ const CustomInput = ({ value, onClick }) => (
                             customInput={<CustomInput />}
                         /> <br /> <br />
                         {selectedDate && (
-                            <span className='dateCalendar'><FaCalendar color='white' /> Your reservation is for {selectedDate.toLocaleDateString()}</span>
+                            <span className='dateCalendar'  style={{color:'#3a0868'}}><FaCalendar color='white' /> Your reservation is for {selectedDate.toLocaleDateString()}</span>
                         )}
                         {/* usamos selectedDate para mostrar un mensaje debajo del calendario despues de que se selcciona una fecha */}
                     </div>
-                    <h6 className='cancellation'><FaBan color='white' /> This package adheres to our cancellation policy</h6>
+                    <h6 className='cancellation'  style={{color:'#3a0868'}}><FaBan color='white' /> This package adheres to our cancellation policy</h6>
                     <div className='trolley'>
                         <LinkRouter to='/ShoppingCart'>
-                            <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'white' }}>
+                            <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight:'bold' }}>
                                 Add to cart <AddShoppingCartIcon />
                             </Button>
                         </LinkRouter>

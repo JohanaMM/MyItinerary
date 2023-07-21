@@ -85,7 +85,7 @@ function Cities() {
   }
 
   return (
-    <>
+    <div className='bodyCities'>
       <Navbar />
       <div className='bodyCountry'>
         <div className="searchFilters">
@@ -129,7 +129,7 @@ function Cities() {
         <a href="#UP" className='buttonUp'><FaAngleUp /></a>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
