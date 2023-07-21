@@ -20,7 +20,6 @@ function Itineraries() {
     async function getItineraries(id) {
         const itineraryDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/" + id)
         setItineraries(itineraryDB.data.response)
-
     }
 
     useEffect(() => {
@@ -29,7 +28,7 @@ function Itineraries() {
 
 
     return (
-        <>
+        <div className='bodyItinerary'>
             <Navbar />
             {
                 Object.keys(itineraries).length > 0 ?
@@ -52,6 +51,7 @@ function Itineraries() {
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: '100% 100%',
                                     backgroundSize: 'cover',
+                                    borderRadius:'10px'
                                 }}>
                                 </div>
                                 <div className='container-Img' >
@@ -60,6 +60,7 @@ function Itineraries() {
                                         backgroundRepeat: 'no-repeat',
                                         backgroundPosition: 'center',
                                         backgroundSize: 'cover',
+                                        borderRadius:'10px'
                                     }}>
 
                                     </div>
@@ -68,6 +69,7 @@ function Itineraries() {
                                         backgroundRepeat: 'no-repeat',
                                         backgroundPosition: 'center',
                                         backgroundSize: 'cover',
+                                        borderRadius:'10px'
                                     }}>
 
                                     </div>
@@ -109,7 +111,7 @@ function Itineraries() {
                     </div>
             }
             <Footer />
-        </>
+        </div>
     );
 }
 

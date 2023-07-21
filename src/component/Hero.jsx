@@ -2,7 +2,7 @@ import '../styles/Hero.css'
 import { Link as LinkRouter } from 'react-router-dom'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import imgHero from '../images/hero.jpeg'
+import imgHero from '../images/hero.svg'
 
 function Hero() {
     return (
@@ -12,7 +12,8 @@ function Hero() {
 
             backgroundSize: 'cover',
           }}>
-            <Navbar/>
+            <div className='overlayHero' >
+                <Navbar/>
             <div className='pagP'>
                 <div className='C-Text'>
                     <span className='imgL' />
@@ -24,6 +25,8 @@ function Hero() {
             </div>
             <div >
                  <Footer/>
+            </div>
+            
             </div>
            
         </div>

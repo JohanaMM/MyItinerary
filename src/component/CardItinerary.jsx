@@ -75,7 +75,7 @@ function CardItinerary(prop) {
                 {itinerary.likes}
               </label>
               <LinkRouter to={"/Itineraries/" + itinerary._id}>
-                <Button variant="contained" sx={{ color: 'white', backgroundColor: '#0e17649d' }}>
+                <Button variant="contained" sx={{ color: 'yellow', backgroundColor: '#500892', fontWeight:'bold' }}>
                   Details
                 </Button>
               </LinkRouter>

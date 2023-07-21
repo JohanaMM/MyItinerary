@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+.bodyCities{
+    background: linear-gradient(blueviolet, rgba(137, 43, 226, 0.349), blueviolet);
+}
+
 .bodyCountry {
     width: 100vw;
     height: 60%;
@@ -38,16 +42,11 @@
 
 .searchFilters {
     width: 100%;
-    margin-top: 30px;
+    margin: 30px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-}
-
-:root {
-    --gray: #29292983;
-    --darkgray: #333b87;;
 }
 
 select {
@@ -57,11 +56,11 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 1em;
-    color: #fff;
-    background-color: var(--darkgray);
+    color: #3a0868;
     background-image: none;
     cursor: pointer;
     font-size: 18px;
+    background-color: #ffffff9d;
 }
 
 select::-ms-expand {
@@ -87,25 +86,27 @@ option{
     top: 0;
     right: 0;
     padding: 1em;
-    background-color: #0e17649d;
+    background-color: #ffffff9d;
     transition: .25s all ease;
     pointer-events: none;
 }
 
 .select:hover::after {
-    color: #009D71;
+    color: blueviolet;
 }
 
 input[type="search"] {
     width: 28em;
     height: 2.5em;
-    background-color: #0e17649d;
+    background-color: #ffffff9d;
+    border: 2px solid rgb(58, 8, 104);
     margin: 0px 15px;
     border-radius: 5px;
 }
 
 ::placeholder {
-    color: rgb(255, 255, 255);
+    color: rgb(58, 8, 104);
+    padding-left: 20px;
 }
 
 .cardCities{
