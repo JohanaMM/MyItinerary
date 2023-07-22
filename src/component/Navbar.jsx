@@ -24,7 +24,7 @@ function Navbar() {
                         </LinkRouter>
                     </div>
                     <div className='user'>
-                        <LinkRouter>
+                        <LinkRouter to='/SignIn'>
                             <span><FaUserCircle color='white' size='40px' /></span>
                         </LinkRouter>
                     </div>

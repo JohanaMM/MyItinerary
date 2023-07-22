@@ -1,206 +1,157 @@
-import React from 'react';
-import '../styles/Home.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
-import { FaPlaneDeparture } from 'react-icons/fa';
-import { Link as LinkRouter } from 'react-router-dom'
-import imgC from '../images/hero.svg'
-import bodyHome from '../images/caitiesHome.svg'
+import React, { useRef, useState, useEffect } from "react";
+import { FaAngleLeft, FaAngleRight, FaPlaneDeparture } from 'react-icons/fa';
+import "../styles/Home.css";
 import Navbar from './Navbar';
 import Footer from './Footer'
+import { Link as LinkRouter } from 'react-router-dom'
 
-const imgCarousel = [
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ARGENTINA.svg?alt=media&token=c53f7b56-6b52-4371-8824-916dc60ab55e',
-    title: 'ARGENTINA',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/AUSTRALIA.svg?alt=media&token=9dde0a5d-de7d-4267-8245-9eab05203318',
-    title: ' AUSTRALIA',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/USA.svg?alt=media&token=babb740f-c609-4d39-bb8a-d1c56a0e75aa',
-    title: ' USA',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ESPANA.svg?alt=media&token=8f83ddb9-b782-4640-b0eb-f40d143b9b3f',
-    title: 'SPAIN',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/JAPON.svg?alt=media&token=d558257d-5225-45a3-b9da-b1de34cbcd20',
-    title: 'JAPAN',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/COLOMBIA.svg?alt=media&token=94b953e6-048d-4aa5-bacc-8ea46159b4a5',
-    title: 'COLOMBIA',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/FRANCE.svg?alt=media&token=ab5578e4-3bf0-42b3-9e4d-d8a8fb6f99be',
-    title: 'FRANCE',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/REINO-UNIDO.svg?alt=media&token=9a980457-f9f6-47db-85c1-ec200f06a7e3',
-    title: 'UNITED KINGDOM',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/CHINA.svg?alt=media&token=6922471b-eb63-44c3-85f8-219d68bdc1e5',
-    title: 'CHINA',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/BRASIL.svg?alt=media&token=7aad24d7-94ea-4fc2-9a0c-ec5f12b20f9d',
-    title: 'BRAZIL',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/ITALIA.svg?alt=media&token=3759b68e-ff24-4584-9869-bde5e788372a',
-    title: 'ITALY',
-  },
-  {
-    img: 'https://firebasestorage.googleapis.com/v0/b/mytinerary-mv.appspot.com/o/VENEZUELA.svg?alt=media&token=99eabfa0-b40e-4a09-8bd7-2d5df17e6b2d',
-    title: 'VENEZUELA',
-  }
-];
+function HomeTEST() {
+    const slideRef = useRef(null);
+    const [loadingProgress, setLoadingProgress] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-function Home() {
-  return (
-    <div style={{
-      backgroundImage: `url(${bodyHome})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: '100%',
-      backgroundSize: 'cover',
-    }}>
-      <Navbar />
-      <div className="carousel-container">
-       <h2>Popular My Itineraries</h2>
-        <div className='CallTo'>
-          <h4>Where will your next adventure be?</h4>
-          <LinkRouter to={"/Cities"}>
-            <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
-          </LinkRouter>
-        </div>
-        <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="row">
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-ARGENTINA" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
+    const data = [
+        {
+            id: 1,
+            imgUrl: "https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 2,
+            imgUrl:
+                "https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 3,
+            imgUrl:
+                "https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 5,
+            imgUrl: "https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 6,
+            imgUrl:
+                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 7,
+            imgUrl:
+                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 8,
+            imgUrl: "https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 9,
+            imgUrl:
+                "https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 10,
+            imgUrl:
+                "https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 11,
+            imgUrl: "https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        },
+        {
+            id: 12,
+            imgUrl:
+                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "NOMBRE PAIS",
+            name: "Popular My Itineraries",
+        }
+    ];
 
-                  }} />
-                  <p className='name-img'>ARGENTINA</p>
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleClickNext();
+        }, 5000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
+    const handleClickNext = () => {
+        let items = slideRef.current.querySelectorAll('.item');
+        slideRef.current.appendChild(items[0]);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
+    };
+
+    const handleClickPrev = () => {
+        let items = slideRef.current.querySelectorAll('.item');
+        slideRef.current.prepend(items[items.length - 1]);
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
+    };
+
+
+    return (
+        <>
+            <Navbar />
+            <div className="bodyHome">
+                <div className='CallTo'>
+                    <h4>Where will your next adventure be?</h4>
+                    <LinkRouter to={"/Cities"}>
+                        <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
+                    </LinkRouter>
                 </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-AUSTRALIA" style={{
-                    backgroundSize: 'cover',
-                    borderRadius: '10px',
+                <div className="container">
+                    <div className="loadbar" style={{ width: `${loadingProgress}%` }}></div>
+                    <div id="slide" ref={slideRef}>
+                        {data.map((item) => (
+                            <div
+                                key={item.id}
+                                className="item"
+                                style={{ backgroundImage: `url(${item.imgUrl})` }}
+                            >
+                                <div className="overlayHome">
+                                    <div className="content">
+                                    <div className="name">{item.name}</div>
+                                    <div className="des">{item.desc}</div>
 
-                  }} />
-                  <p className='name-img'>AUSTRALIA</p>
+                                </div>
+                                </div>
+                                
+                            </div>
+                        ))}
+                    </div>
+                    <div className="buttons">
+                        <button id="prev" onClick={handleClickPrev}>
+                            <FaAngleLeft />
+                        </button>
+                        <button id="next" onClick={handleClickNext}>
+                            <FaAngleRight />
+                        </button>
+                    </div>
                 </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="imgUSA" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>USA</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-SPAIN" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>SPAIN</p>
-                </div>
-              </div>
             </div>
-            <div className="carousel-item">
-              <div className="row">
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-JAPAN" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
+            <Footer />
+        </>
+    );
+};
 
-                  }} />
-                  <p className='name-img'>JAPAN</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-COLOMBIA" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>COLOMBIA</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-FRANCE" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>FRANCE</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-UNITEDKINGDOM" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>UNITED KINGDOM</p>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="row">
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-CHINA" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>CHINA</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-BRAZIL" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>BRAZIL</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-ITALY" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>ITALY</p>
-                </div>
-                <div className="col">
-                  <img src={imgC} className="carousel-image" alt="img-VENEZUELA" style={{
-                    backgroundSize: '100%',
-                    borderRadius: '10px',
-
-                  }} />
-                  <p className='name-img'>VENEZUELA</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Anterior</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default Home;
+export default HomeTEST;
