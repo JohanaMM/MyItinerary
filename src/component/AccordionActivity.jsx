@@ -18,12 +18,12 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography style={{color:'#3a0868'}}>What is included</Typography>
+          <Typography style={{ color: '#3a0868' }}>What is included</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{color:'#3a0868'}}>
+          <Typography style={{ color: '#3a0868' }}>
             <ul>
-              <p>All our packages include</p>
+              <Typography style={{ color: '#3a0868' }}>All our packages include</Typography>
               <li>Guided visit</li>
               <li>Help from instructors for activities</li>
               <li>First aid assistance</li>
@@ -42,11 +42,11 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography style={{color:'#3a0868'}}>Departure and Return</Typography>
+          <Typography style={{ color: '#3a0868' }}>Departure and Return</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{color:'#3a0868'}}>
-            All our activities are organized in such a way that they are comfortable for our users, so the starting point is decided by you.
+          <Typography style={{ color: '#3a0868' }}>
+            Our activities include transportation to take you from your accommodation to the starting point and at the end they take you back to guarantee your comfort.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -60,10 +60,10 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography style={{color:'#3a0868'}}>Cancellation Policy</Typography>
+          <Typography style={{ color: '#3a0868' }}>Cancellation Policy</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{color:'#3a0868'}}>
+          <Typography style={{ color: '#3a0868' }}>
             Our cancellation policy allows you to cancel your activity up to one day before the date for any inconvenience that may arise and you have up to 30 days to reschedule.
           </Typography>
         </AccordionDetails>
@@ -78,10 +78,10 @@ function BasicAccordion() {
             fontFamily: '"Lucida Console", Monaco, monospace',
           }}
         >
-          <Typography style={{color:'#3a0868'}}>Frequent Questions</Typography>
+          <Typography style={{ color: '#3a0868' }}>Frequent Questions</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography style={{color:'#3a0868'}}>
+          <Typography style={{ color: '#3a0868' }}>
             <ul>
               <li>Question 1: What type of accommodation is offered on the tours? <br />
                 Answer 1: Our tours offer a variety of accommodation options, from luxury hotels to boutique accommodation and country houses. We carefully select the accommodations to ensure that they meet high standards of quality and comfort.</li>

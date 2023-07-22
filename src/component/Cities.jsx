@@ -96,11 +96,8 @@ function Cities() {
               value={filter.country} //se le da el value de filter.country en onChange para que filtre segun el pais seleccionado segun indique el value
               onChange={(e) => setFilter({ ...filter, country: e.target.value })}>
               <option value="">Choose the country you want to visit</option>
-              <option value="Argentina">Argentina</option>
               <option value="Australia">Australia</option>
-              <option value="Brazil">Brazil</option>
               <option value="China">China</option>
-              <option value="Colombia">Colombia</option>
               <option value="France">France</option>
               <option value="Germany">Germany</option>
               <option value="Italy">Italy</option>
@@ -108,7 +105,6 @@ function Cities() {
               <option value="Spain">Spain</option>
               <option value="United Kingdom">United Kingdom</option>
               <option value="United States">United States</option>
-              <option value="Venezuela">Venezuela</option>
             </select>
           </div>
           <div>
