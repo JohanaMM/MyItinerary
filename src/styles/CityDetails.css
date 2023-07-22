@@ -180,10 +180,55 @@
     }
   }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 290px){
+    .title {
+        top: 15%;
+        font-size: 3em;
+        height: 0vh;
+        margin-top: 150px;
+    }
+
+    .sectionInf {
+        flex-direction: column-reverse;
+        height: 40vh;
+    }
+
+    .items {
+        width: 100%;
+    }
+
+    .items p {
+        font-size: 12px;
+    }
+
+    .description {
+        align-items: center;
+    }
+
+    .description p {
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .titleActivities {
+        font-size: 25px;
+        height: 0px;
+    }
+
+    .activities{
+        height: 44vh;
+    }
+
+    .animationR{
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width: 291px) and (max-width: 600px) {
     .title {
         top: 20%;
-        font-size: 2em;
+        font-size: 3em;
         height: 0vh;
         margin-top: 200px;
     }

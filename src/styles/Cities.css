@@ -237,7 +237,35 @@ input[type="search"] {
     height: 300px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 290px){
+    .searchFilters{
+        flex-direction: column-reverse;
+    }
+
+    select,
+    ::placeholder{
+        font-size: 12px;
+    }
+
+    .select {
+        width: 17em;
+        height: 1.8em;
+        margin-top: 10px;
+    }
+
+    option{
+        width: 15em;
+    }
+
+    input[type="search"] {
+        width: 17em;
+        height: 2em;
+
+    }
+    
+}
+
+@media screen and (min-width: 291px) and (max-width: 600px) {
     .searchFilters{
         flex-direction: column-reverse;
     }

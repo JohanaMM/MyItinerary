@@ -25,3 +25,10 @@
 :root {
     --swiper-theme-color: #3a0868 !important;
 }
+
+@media screen and (max-width: 290px){
+    .css-nzinn5-MuiContainer-root {
+        max-width: 444px;
+        height: 90vh;
+    }
+}

@@ -1,27 +1,19 @@
 import '../styles/ShoppingCart.css'
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Navbar'
 import Footer from './Footer'
-import smallImage from '../images/UC.png';
 
+function ShoppingCart() {
 
-function ShoppingCart(){
-
-
-    return(
+    return (
         <>
-        <div className='overlayI'>
             <Navbar />
-            <div className="containerI">
-                <div className="imgCotainerI">
-                    <p className='textI'>CART UNDER CONSTRUCTION</p>
-                    <img src={smallImage} className="imageI" alt="UNDER CONSTRUCTION" />
+                <div className='shoppingCart'>
+
                 </div>
-            </div>
             <Footer />
-        </div>
         </>
-    )
+    );
 }
 
 export default ShoppingCart
