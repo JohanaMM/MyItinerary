@@ -1,5 +1,5 @@
 import '../styles/ShoppingCart.css'
-import React, { useState } from 'react';
+import React from 'react';
 import Navbar from './Navbar'
 import Footer from './Footer'
 

@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import Navbar from './Navbar';
 import Footer from './Footer'
 import { Link as LinkRouter } from 'react-router-dom'
+import flag from '../images/argentina.png'
 
 function HomeTEST() {
     const slideRef = useRef(null);
@@ -13,76 +14,87 @@ function HomeTEST() {
     const data = [
         {
             id: 1,
-            imgUrl: "https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
+            desc: "AUSTRALIA",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 2,
-            imgUrl:
-                "https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
+            desc: "SPAIN",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 3,
-            imgUrl:
-                "https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
+            desc: "JAPAN",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
+        },
+        {
+            id: 4,
+            imgUrl:"https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
+            desc: "ARGENTINA",
+            name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 5,
-            imgUrl: "https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
+            desc: "CHINA",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 6,
-            imgUrl:
-                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "FRANCE",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 7,
-            imgUrl:
-                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "ITALY",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 8,
-            imgUrl: "https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/PrMGqZwx/pexels-m-venter-1659437.jpg",
+            desc: "GERMANY",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 9,
-            imgUrl:
-                "https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/bw6KxhLf/pexels-eberhard-grossgasteiger-1062249.jpg",
+            desc: "UNITED KINGDON",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 10,
-            imgUrl:
-                "https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/CMkTW9Mb/pexels-eberhard-grossgasteiger-572897.jpg",
+            desc: "UNITED STATES",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 11,
-            imgUrl: "https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/6qdkn4bM/pexels-joyston-judah-933054.jpg",
+            desc: "COLOMBIA",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         },
         {
             id: 12,
-            imgUrl:
-                "https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
-            desc: "NOMBRE PAIS",
+            imgUrl:"https://i.postimg.cc/RVm59Gqy/pexels-roberto-nickson-2559941.jpg",
+            desc: "VENEZUELA",
             name: "Popular My Itineraries",
+            flag: <img src={flag} className="flag" alt="flag" />
         }
     ];
 
@@ -131,7 +143,7 @@ function HomeTEST() {
                                 <div className="overlayHome">
                                     <div className="content">
                                     <div className="name">{item.name}</div>
-                                    <div className="des">{item.desc}</div>
+                                    <div className="des">{item.flag}{item.desc}</div>
 
                                 </div>
                                 </div>
