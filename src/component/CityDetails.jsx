@@ -89,8 +89,6 @@ function CityDetails() {
                                                 modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                                                 className="mySwiper"
                                             >
-
-
                                                 {itineraries.map((itinerary) => (
 
                                                     <SwiperSlide key={itinerary._id}>
