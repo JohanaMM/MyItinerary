@@ -34,13 +34,13 @@ function ReserveActivity() {
 
     const CustomInput = ({ value, onClick }) => (
         <div>
-            <span style={{ color: '#3a0868' }}>Number of people: </span>
-            <div className="custom-input">
+            <span style={{ color: '#3a0868', width:'100%'}}>Number of people: </span>
+            <div className="custom-input" style={{width:'100%'}}>
                 <Button onClick={handleDecrement}><RemoveCircleIcon sx={{ color: 'white' }} /></Button>
                 <span style={{ color: '#3a0868' }}>{numberOfPeople}</span>
                 <Button onClick={handleIncrement}><AddCircleIcon sx={{ color: 'white' }} /></Button>
             </div>
-            <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold' }}>
+            <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold', width:'100%' }}>
                 {value || 'Select a date'}
             </Button>
         </div>
