@@ -61,9 +61,21 @@
     margin-left: 10px;
 }
 
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 800px) {
     .css-nzinn5-MuiContainer-root {
         max-width: 444px;
-        height: 90vh;
+        height: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .iconGoogle {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .buttonsocial {
+        font-size: 12px;
+        padding: 3px 8px;
+        margin-bottom: 15px;
     }
 }
