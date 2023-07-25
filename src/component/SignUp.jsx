@@ -15,23 +15,20 @@ import { Link as LinkRouter } from 'react-router-dom'
 import Navbar from './Navbar';
 import Footer from './Footer'
 import '../styles/Sign.css'
-import { GoogleLogin } from '@react-oauth/google';
-
+import { useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import iconG from '../images/buscar.png'
+import iconF from '../images/facebook.png'
 
 const defaultTheme = createTheme();
 
 function SignUp(props) {
 
-  const responseGoogle = async (res) => {
-    const userData = {
-      fullName: res.profileObj.givenName + " " + res.profileObj.familyName,
-      email: res.profileObj.email,
-      password: res.profileObj.googleId + "Ab0",
-      from: "google",
-      pais: props.pais
-    }
-    await props.signUpUser(userData)
-  }
+  const login = useGoogleLogin({ onSuccess: async tokenResponse => { console.log(tokenResponse); 
+    const userInfo = await axios.get('https://www.googleapis.com/oauth2/v3/userinfo', 
+    { headers: { Authorization: `Bearer ${tokenResponse.access_token}` }, }) 
+    .then(res => res.data); console.log(userInfo); }, 
+  });
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -118,9 +115,13 @@ function SignUp(props) {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
-                style={{ backgroundColor: '#3a0868', color: 'yellow' }}
+                style={{ 
+                  backgroundColor: '#3a0868', 
+                  color: 'yellow', 
+                  borderRadius: '30px'
+                }}
               >
-                Sign Up
+               Sign Up
               </Button>
               <div className="row">
                 <div className="col-5 linea">
@@ -133,21 +134,28 @@ function SignUp(props) {
                   <hr />
                 </div>
               </div>
-              <GoogleLogin
+              <div className='social'>
+                <button
                 className="buttonsocial"
-                clientId="971845975096-a3gu832l2esbdv2dmp2iktvql4t5imot.apps.googleusercontent.com"
-                buttonText="SignUp with Google"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-                cookiePolicy={'single_host_origin'}
-              />
+                onClick={login}
+              >
+                <img src={iconG} className='iconGoogle' alt="Google" />Sign in with Google {' '}
+              </button>
+              <button 
+              className="buttonsocial"
+              onClick={login}
+              > 
+               <img src={iconF} className='iconGoogle' alt="Google" />{' '}Sign in with Facebook 
+              </button>
+              </div>
               <Grid container justifyContent="flex-start">
                 <Grid item style={{marginTop:'15px 0px'}}>
                   <LinkRouter to='/SignIn' 
                   style={{ 
                     color: '#3a0868',
                     display:'flex', 
-                    flexDirection:'row'
+                    flexDirection:'row',
+                    margin:'15px 0px'
                      }}>
                     Already have an account? 
                     <p className='animation buttonUser'>Sign In</p>

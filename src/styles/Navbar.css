@@ -91,7 +91,7 @@ a{
     }
 
     .user{
-        width: 70%;
+        width: 55%;
         display: flex;
         justify-content: flex-end;
         margin-right: 5px;
@@ -155,6 +155,10 @@ a{
 
     .cities p{
         font-size: 20px;
+    }
+
+    .user{
+        width: 55%;
     }
 }
 

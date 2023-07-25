@@ -13,14 +13,15 @@ body {
 
 .container {
     position: absolute;
-    left: 47%;
+    left: 50%;
     top: 10%;
     margin-top: 300px;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 90%;
     height: 55%;
     padding: 0px;
     background-color: transparent;
+    border-radius: 20px;
 }
 
 #slide {
@@ -84,8 +85,12 @@ body {
 }
 
 .item:nth-child(2) .content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
     z-index: 11111;
+    height: 100%;
 }
 
 .item .name {
@@ -113,7 +118,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(0, 0, 0, 0.349);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -225,8 +230,8 @@ body {
     }
 
     .item {
-        width: 200px;
-        height: 240px;
+        width: 180px;
+        height: 220px;
     }
 
     .item .content {
@@ -240,6 +245,7 @@ body {
 
     .item .des {
         margin-bottom: 20px;
+        font-size: 18px;
     }
 
     .item:nth-child(4),
@@ -267,33 +273,43 @@ body {
     }
 
     .item .name {
+        font-size: 30px;
         margin-bottom: 330px;
     }
 
     .item .des {
-        margin-bottom: 80px;
+        font-size: 25px;
+        margin-bottom: 50px;
     }
 
     .item:nth-child(4),
     .item:nth-child(5) {
         opacity: 0;
     }
+
+    .item{
+        height: 250px;
+    }
 }
 
 @media screen and (min-width: 601px) and (max-width: 980px) {
     .container {
         top: 20%;
-        margin-top: 240px;
+        margin-top: 330px;
     }
 
     .item:nth-child(5) {
         opacity: 0;
     }
+
+    .CallTo{
+        top: 13%;
+    }
 }
 
 @media screen and (min-width: 981px) and (max-width: 1281px) {
     .bodyHome {
-        height: 60vh;
+        height: 75vh;
     }
 
     .container {
