@@ -301,14 +301,25 @@ body {
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 980px) {
+@media screen and (min-width: 601px) and (max-width:1200px) {
     .bodyHome {
-        height: 130vh;
+        height: 60vh;
     }
 
     .container {
         top: 20%;
         margin-top: 330px;
+        height: 45vh;
+    }
+
+    .item{
+        width: 200px;
+        height: 250px;
+    }
+
+    .item .name {
+        font-size: 40px;
+        margin-bottom: 150px;
     }
 
     .item:nth-child(5) {
@@ -317,17 +328,8 @@ body {
 
     .CallTo {
         top: 13%;
-    }
-}
-
-@media screen and (min-width: 981px) and (max-width: 1281px) {
-    .bodyHome {
-        height: 75vh;
-    }
-
-    .container {
-        top: 20%;
-        margin-top: 240px;
-        height: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

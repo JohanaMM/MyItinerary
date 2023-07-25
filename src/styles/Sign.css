@@ -9,8 +9,8 @@
 
 .css-nzinn5-MuiContainer-root {
     max-width: 444px;
-
-    min-height: fit-content;
+    height: fit-content;
+    min-height: 63vh;
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
@@ -61,7 +61,7 @@
     margin-left: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 760px) {
     .css-nzinn5-MuiContainer-root {
         max-width: 444px;
         height: fit-content;

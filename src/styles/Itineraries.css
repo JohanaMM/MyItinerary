@@ -141,7 +141,7 @@ h5 {
 }
 
 .react-datepicker__input-container {
-    width: 80% !important;
+    width: 90% !important;
 }
 
 .calendar {
@@ -160,6 +160,14 @@ h5 {
     position: relative;
     width: 100vw;
     height: 76vh;
+}
+
+@media screen and (max-width: 289px) {
+
+.calendar {
+    width: 100% !important;
+    height: auto;
+}
 }
 
 @media screen and (max-width: 900px) {
@@ -196,7 +204,7 @@ h5 {
     }
 
     .calendar {
-        width: 78%;
+        width: 90% !important;
         height: auto;
     }
 
