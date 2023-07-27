@@ -42,12 +42,14 @@
 .backCities {
     border: 2px solid black;
     border-radius: 100px;
-    padding: 5px 8px 5px 5px;
+    padding: 2px 8px 5px 5px;
     font-size: 20px;
     background-color: white;
     color: black;
     cursor: pointer;
     margin: 20px;
+    top: 10px;
+    position: relative;
 }
 
 .buttonDetails {
@@ -122,6 +124,7 @@
 .swiper {
     width: 80%;
     height: 110%;
+    width: 100vw;
 }
 
 .swiper-slide {
@@ -223,9 +226,23 @@
         text-align: center;
     }
 
+    .backCities {
+        font-size: 16px;
+        margin: 6px;
+        top: 12px;
+        position: relative;
+    }
+
 }
 
 @media screen and (min-width: 291px) and (max-width: 600px) {
+    .backCities {
+        font-size: 16px;
+        margin: 6px;
+        top: 12px;
+        position: relative;
+    }
+
     .title {
         top: 20%;
         font-size: 3em;

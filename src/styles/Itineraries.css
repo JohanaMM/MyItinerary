@@ -126,6 +126,7 @@ h5 {
 .cancellation {
     color: black;
     line-height: 40px;
+    font-size: 16px;
 }
 
 .react-datepicker-wrapper {
@@ -180,6 +181,10 @@ h5 {
         width: 100% !important;
         height: auto;
     }
+
+    .cancellation {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -190,7 +195,7 @@ h5 {
     }
 
     .cont-activity-img {
-        height: 40vh;
+        height: 25vh;
     }
 
     .booking-info {
@@ -218,6 +223,10 @@ h5 {
     .calendar {
         width: 90% !important;
         height: auto;
+    }
+
+    .cancellation {
+        font-size: 14px;
     }
 
     .imgI {

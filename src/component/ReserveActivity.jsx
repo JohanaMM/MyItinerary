@@ -34,7 +34,7 @@ function ReserveActivity() {
 
     const CustomInput = ({ value, onClick }) => (
         <div>
-            <span style={{ color: '#3a0868', width:'100%'}}>Number of people: </span>
+            <span className='cancellation' style={{ color: '#3a0868', width:'100%'}}>Number of people: </span>
             <div className="custom-input" style={{width:'100%'}}>
                 <Button onClick={handleDecrement}><RemoveCircleIcon sx={{ color: 'white' }} /></Button>
                 <span style={{ color: '#3a0868' }}>{numberOfPeople}</span>
@@ -69,7 +69,7 @@ function ReserveActivity() {
                         )}
                         {/* usamos selectedDate para mostrar un mensaje debajo del calendario despues de que se selcciona una fecha */}
                     </div>
-                    <h6 className='cancellation' style={{ color: '#3a0868' }}><FaBan color='white' /> This package adheres to our cancellation policy</h6>
+                    <p className='cancellation' style={{ color: '#3a0868' }}><FaBan color='white' /> This package adheres to our cancellation policy</p>
                     <div className='trolley'>
                         <LinkRouter to='/ShoppingCart'>
                             <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold' }}>

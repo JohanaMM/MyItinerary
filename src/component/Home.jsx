@@ -17,7 +17,7 @@ import img10 from '../images/japon.png'
 import img11 from '../images/reino-unido.png'
 import img12 from '../images/venezuela.png'
 
-function HomeTEST() {
+function Home() {
     const slideRef = useRef(null);
     const [loadingProgress, setLoadingProgress] = useState(0);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -177,4 +177,4 @@ function HomeTEST() {
     );
 };
 
-export default HomeTEST;
+export default Home;

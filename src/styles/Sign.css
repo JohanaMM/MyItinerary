@@ -14,7 +14,7 @@
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
-    background-color: rgba(255, 255, 255, 0.781);
+    background-color: #ffffffc7;
     border-radius: 15px;
     height: 19px;
 }
@@ -25,7 +25,7 @@
 }
 
 :root {
-    --swiper-theme-color: #3a0868 !important;
+    --swiper-theme-color: #ffe600 !important;
 }
 
 .social {
@@ -59,6 +59,28 @@
     background-color: #500892;
     text-align: center;
     margin-left: 10px;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    padding: 4px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    color: black;
+    height: 1.4375em;
+    margin: 0;
+    -webkit-tap-highlight-color: #ffffffc7;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
 }
 
 @media screen and (max-width: 760px) {
