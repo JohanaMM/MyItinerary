@@ -50,9 +50,14 @@ function ShoppingCart() {
         getCart(id);
     }, []);
     console.log(id)
-    const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [openDataModal, setOpenDataModal] = React.useState(false);
+    const [openConfirmationModal, setOpenConfirmationModal] = React.useState(false);
+
+    const handleOpenDataModal = () => setOpenDataModal(true);
+    const handleCloseDataModal = () => setOpenDataModal(false);
+
+    const handleOpenConfirmationModal = () => setOpenConfirmationModal(true);
+    const handleCloseConfirmationModal = () => setOpenConfirmationModal(false);
     const classes = useStyles();
 
     return (
@@ -73,11 +78,11 @@ function ShoppingCart() {
                             </div>
                         </div>
                         <p>
-                                        <FaDollarSign size='20px' color='#3a0868' />
-                                        {Array.from({ length: itinerary.price }, (_, index) => (
-                                            <FaMoneyBillWave style={{ margin: '0 5px' }} size='20px' color='#3a0868' key={index} />
-                                        ))}
-                                    </p>
+                            <FaDollarSign size='20px' color='#3a0868' />
+                            {Array.from({ length: itinerary.price }, (_, index) => (
+                                <FaMoneyBillWave style={{ margin: '0 5px' }} size='20px' color='#3a0868' key={index} />
+                            ))}
+                        </p>
                         <Box
                             sx={{
                                 height: '40px',
@@ -107,19 +112,20 @@ function ShoppingCart() {
                             padding: '8px',
                             borderRadius: '15px',
                             backgroundColor: 'white',
-                            marginTop: '20px'
+                            marginTop: '20px',
+                            marginLeft: '0%'
                         }}>
-                            <Button onClick={handleOpen} style={{
+                            <Button onClick={handleOpenDataModal} style={{
                                 color: '#3a0868'
                             }}>Send data</Button>
                             <Modal
-                                open={open}
-                                onClose={handleClose}
-                                aria-labelledby="modal-modal-title"
-                                aria-describedby="modal-modal-description"
+                                open={openDataModal}
+                                onClose={handleCloseDataModal}
+                                aria-labelledby="modal-modal-title2"
+                                aria-describedby="modal-modal-description2"
                             >
                                 <Box sx={style} >
-                                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{
+                                    <Typography id="modal-modal-title2" variant="h6" component="h2" style={{
                                         color: '#3a0868'
                                     }}>
                                         We have sent the payment information to your email, you are getting closer to your trip!
@@ -137,8 +143,8 @@ function ShoppingCart() {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                                <TextField id="outlined-basic" label="Name" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px', border:'none'}} />
-                                <TextField id="outlined-basic" label="Last Name" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
+                                <TextField id="outlined-basic" label="Name" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px', border: 'none' }} />
+                                <TextField id="outlined-basic" label="Last Name" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
                             </div>
                             <div style={{
                                 display: 'flex',
@@ -146,18 +152,18 @@ function ShoppingCart() {
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                                <TextField id="outlined-basic" label="Addres" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
-                                <TextField id="outlined-basic" label="City" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
+                                <TextField id="outlined-basic" label="Addres" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
+                                <TextField id="outlined-basic" label="City" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
                             </div>
-                            <TextField id="outlined-basic" label="Phone Number" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
+                            <TextField id="outlined-basic" label="Phone Number" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
                             <div style={{
                                 display: 'flex',
                                 flexDirection: 'row',
                                 justifyContent: 'center',
                                 alignItems: 'center'
                             }}>
-                                <TextField id="outlined-basic" label="Confirmation Code" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
-                                <TextField id="outlined-basic" label="Email" variant="outlined" style={{backgroundColor:'#ffffff93', borderRadius:'15px'}} />
+                                <TextField id="outlined-basic" label="Confirmation Code" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
+                                <TextField id="outlined-basic" label="Email" variant="outlined" style={{ backgroundColor: '#ffffff93', borderRadius: '15px' }} />
                             </div>
                         </form>
                         <div style={{
@@ -169,12 +175,12 @@ function ShoppingCart() {
                             marginTop: '20px',
                             marginLeft: '0%'
                         }}>
-                            <Button onClick={handleOpen} style={{
+                            <Button onClick={handleOpenConfirmationModal} style={{
                                 color: '#3a0868'
                             }}>Send confirmation</Button>
                             <Modal
-                                open={open}
-                                onClose={handleClose}
+                                open={openConfirmationModal}
+                                onClose={handleCloseConfirmationModal}
                                 aria-labelledby="modal-modal-title"
                                 aria-describedby="modal-modal-description"
                             >
