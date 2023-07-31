@@ -168,12 +168,14 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
     position: absolute;
     top: 12%;
 }
 
-.CallTo h4 {
+.CallTo p {
+    font-size: 25px;
     color: white;
 }
 
@@ -214,10 +216,15 @@ body {
     }
 
     .CallTo {
+        width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 16%;
+    }
+
+    .CallTo p {
+        font-size: 16px;
     }
 
     .container {
@@ -263,16 +270,23 @@ body {
 
 @media screen and (min-width: 290px) and (max-width: 384px) {
     .CallTo {
+        width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 16%;
     }
+
+    .CallTo p {
+        font-size: 18px;
+    }
+
     .container {
         top: 18%;
         margin-top: 260px;
         height: 40%;
     }
+
     .item {
         width: 120px;
         height: 160px;
@@ -315,15 +329,20 @@ body {
 
     .container {
         top: 25%;
-        margin-top: 220px;
+        margin-top: 200px;
         height: 40%;
     }
 
     .CallTo {
+        width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         top: 15%;
+    }
+
+    .CallTo p {
+        font-size: 18px;
     }
 
     .item .name {
@@ -415,7 +434,7 @@ body {
 
     .container {
         top: 20%;
-        margin-top: 230px;
+        margin-top: 250px;
         height: 45vh;
     }
 
@@ -507,7 +526,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1051px) and (max-width:2000px) {
+@media screen and (min-width: 1051px) and (max-width:3000px) {
     .container {
         top: 35%;
         margin-top: 130px;

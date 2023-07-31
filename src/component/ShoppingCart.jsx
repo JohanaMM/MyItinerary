@@ -109,11 +109,12 @@ function ShoppingCart() {
                         <div style={{
                             width: 'fit-content',
                             textAlign: 'center',
-                            padding: '8px',
+                            padding: '5px',
                             borderRadius: '15px',
                             backgroundColor: 'white',
                             marginTop: '20px',
-                            marginLeft: '0%'
+                            marginLeft: '0%',
+                            marginBottom:'15px'
                         }}>
                             <Button onClick={handleOpenDataModal} style={{
                                 color: '#3a0868'

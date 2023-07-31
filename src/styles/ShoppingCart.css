@@ -56,6 +56,9 @@
 
 .imgCart {
   height: 120px;
+  border-radius: 15px;
+  margin: 20px;
+
 }
 
 .ditailsCart {
@@ -69,6 +72,11 @@
   padding: 0;
 }
 
+.loadingCart p{
+  font-size: 50px;
+  color: #3a0868;
+}
+
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
   background-color: transparent;
   height: 15px;
@@ -79,8 +87,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .bodyCart,
-  .loadingCart {
+  .bodyCart{
     width: 100vw;
     height: 100%;
     display: flex;
@@ -89,8 +96,16 @@
     align-items: center;
   }
 
+  .loadingCart {
+    height: 75vh;
+  }
+
+  .loadingCart p{
+    font-size: 30px;
+  }
+
   .ditailsItinerary {
-    width: 70%;
+    width: 80%;
     margin: 20px 0px;
   }
 
