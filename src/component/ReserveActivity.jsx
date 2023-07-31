@@ -9,7 +9,7 @@ import { FaCalendar, FaBan } from "react-icons/fa";
 import imgI from '../images/sammyI.png'
 import '../styles/Itineraries.css'
 
-function ReserveActivity() {
+function ReserveActivity({ itinerary }) {
 
     const [selectedDate, setSelectedDate] = useState(null);
     // en este hook se almacenan los datos que se seleccionan del calendario
@@ -34,13 +34,13 @@ function ReserveActivity() {
 
     const CustomInput = ({ value, onClick }) => (
         <div>
-            <span className='cancellation' style={{ color: '#3a0868', width:'100%'}}>Number of people: </span>
-            <div className="custom-input" style={{width:'100%'}}>
+            <span className='cancellation' style={{ color: '#3a0868', width: '100%' }}>Number of people: </span>
+            <div className="custom-input" style={{ width: '100%' }}>
                 <Button onClick={handleDecrement}><RemoveCircleIcon sx={{ color: 'white' }} /></Button>
                 <span style={{ color: '#3a0868' }}>{numberOfPeople}</span>
                 <Button onClick={handleIncrement}><AddCircleIcon sx={{ color: 'white' }} /></Button>
             </div>
-            <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold', width:'100%' }}>
+            <Button variant="contained" className="date-button" onClick={onClick} sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold', width: '100%' }}>
                 {value || 'Select a date'}
             </Button>
         </div>
@@ -71,7 +71,7 @@ function ReserveActivity() {
                     </div>
                     <p className='cancellation' style={{ color: '#3a0868' }}><FaBan color='white' /> This package adheres to our cancellation policy</p>
                     <div className='trolley'>
-                        <LinkRouter to='/ShoppingCart'>
+                        <LinkRouter to={`/ShoppingCart/${itinerary._id}`}>
                             <Button variant="contained" sx={{ backgroundColor: '#3c3e88', color: 'yelow', fontWeight: 'bold' }}>
                                 Add to cart <AddShoppingCartIcon />
                             </Button>

@@ -13,10 +13,9 @@ import { Link as LinkRouter } from 'react-router-dom';
 function Itineraries() {
 
 
-    const [itineraries, setItineraries] = useState({});
+    const [itineraries, setItineraries] = useState([]);
 
     const { id } = useParams();
-
     async function getItineraries(id) {
         const itineraryDB = await axios.get("https://mairenevillasmil-api-itineraries-crud.onrender.com/api/itineraries/" + id)
         setItineraries(itineraryDB.data.response)
@@ -25,7 +24,7 @@ function Itineraries() {
     useEffect(() => {
         getItineraries(id);
     }, []);
-
+console.log(id)
 
     return (
         <div className='bodyItinerary'>
@@ -51,7 +50,7 @@ function Itineraries() {
                                     backgroundRepeat: 'no-repeat',
                                     backgroundPosition: '100% 100%',
                                     backgroundSize: 'cover',
-                                    borderRadius:'10px'
+                                    borderRadius: '10px'
                                 }}>
                                 </div>
                                 <div className='container-Img' >
@@ -60,7 +59,7 @@ function Itineraries() {
                                         backgroundRepeat: 'no-repeat',
                                         backgroundPosition: 'center',
                                         backgroundSize: 'cover',
-                                        borderRadius:'10px'
+                                        borderRadius: '10px'
                                     }}>
 
                                     </div>
@@ -69,7 +68,7 @@ function Itineraries() {
                                         backgroundRepeat: 'no-repeat',
                                         backgroundPosition: 'center',
                                         backgroundSize: 'cover',
-                                        borderRadius:'10px'
+                                        borderRadius: '10px'
                                     }}>
 
                                     </div>
@@ -95,15 +94,14 @@ function Itineraries() {
                                     utilizamos la función de mapeo para generar un componente FaMoneyBillWave para cada índice del array */}
                                     <p><FaUserFriends size='30px' color='white' /> Ages {itineraries.years}, max 16 people per group</p>
                                     <p><FaClock size='30px' color='white' /> {itineraries.time}</p>
-                                    <p><FaGlobe size='30px' color='white' /> English, Spanish</p>
+                                    <p><FaGlobe size='30px' color='white' /> {itineraries.language}</p>
                                 </div>
                                 <div className='more-information'>
                                     <AccordionActivity />
                                 </div>
                             </div>
-                            <ReserveActivity />
+                            <ReserveActivity itinerary={itineraries} />
                         </div>
-
                     </div>
                     :
                     <div className='loadingI'>

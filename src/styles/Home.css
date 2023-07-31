@@ -14,8 +14,8 @@ body {
 .container {
     position: absolute;
     left: 50%;
-    top: 10%;
-    margin-top: 300px;
+    top: 15%;
+    margin-top: 250px;
     transform: translate(-50%, -50%);
     width: 90%;
     height: 55%;
@@ -227,8 +227,8 @@ body {
     }
 
     .item {
-        width: 180px;
-        height: 220px;
+        width: 120px;
+        height: 160px;
     }
 
     .item .content {
@@ -237,7 +237,7 @@ body {
 
     .item .name {
         font-size: 20px;
-        margin-bottom: 300px;
+        margin-bottom: 100px;
     }
 
     .item .des {
@@ -249,17 +249,74 @@ body {
     .item:nth-child(5) {
         opacity: 0;
     }
+
+    .item .content {
+        justify-content: space-around;
+        height: 100%;
+        left: 10px;
+    }
+
+    .buttons{
+        bottom: 5px;
+    }
 }
 
-@media screen and (min-width: 290px) and (max-width: 600px) {
+@media screen and (min-width: 290px) and (max-width: 384px) {
+    .CallTo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 16%;
+    }
+    .container {
+        top: 18%;
+        margin-top: 260px;
+        height: 40%;
+    }
+    .item {
+        width: 120px;
+        height: 160px;
+    }
+
+    .item .content {
+        left: 40px;
+    }
+
+    .item .name {
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+
+    .item .des {
+        margin-bottom: 25px;
+        font-size: 14px;
+    }
+
+    .item:nth-child(4),
+    .item:nth-child(5) {
+        opacity: 0;
+    }
+
+    .item .content {
+        justify-content: space-around;
+        height: 100%;
+        left: 10px;
+    }
+
+    .buttons{
+        bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 385px) and (max-width: 450px) {
     .bodyHome {
         height: 60vh;
     }
 
     .container {
-        top: 20%;
-        margin-top: 260px;
-        height: 45%;
+        top: 25%;
+        margin-top: 220px;
+        height: 40%;
     }
 
     .CallTo {
@@ -270,13 +327,13 @@ body {
     }
 
     .item .name {
-        font-size: 30px;
-        margin-bottom: 150px;
+        font-size: 25px;
+        margin-bottom: 100px;
     }
 
     .item .des {
-        font-size: 25px;
-        margin-bottom: 30px;
+        font-size: 18px;
+        margin-bottom: 50px;
     }
 
     .item:nth-child(4),
@@ -285,8 +342,8 @@ body {
     }
 
     .item {
-        width: 130px;
-        height: 150px;
+        width: 120px;
+        height: 140px;
     }
 
 
@@ -301,14 +358,64 @@ body {
     }
 }
 
-@media screen and (min-width: 601px) and (max-width:1200px) {
+@media screen and (min-width: 451px) and (max-width: 600px) {
     .bodyHome {
         height: 60vh;
     }
 
     .container {
         top: 20%;
-        margin-top: 330px;
+        margin-top: 230px;
+        height: 40%;
+    }
+
+    .CallTo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 15%;
+    }
+
+    .item .name {
+        font-size: 30px;
+        margin-bottom: 100px;
+    }
+
+    .item .des {
+        font-size: 15px;
+        margin-bottom: 50px;
+    }
+
+    .item:nth-child(4),
+    .item:nth-child(5) {
+        opacity: 0;
+    }
+
+    .item {
+        width: 120px;
+        height: 140px;
+    }
+
+
+    .item .content {
+        justify-content: space-around;
+        height: 100%;
+        left: 10px;
+    }
+
+    .buttons{
+        bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width:700px) {
+    .bodyHome {
+        height: 60vh;
+    }
+
+    .container {
+        top: 20%;
+        margin-top: 230px;
         height: 45vh;
     }
 
@@ -318,8 +425,13 @@ body {
     }
 
     .item .name {
-        font-size: 40px;
-        margin-bottom: 150px;
+        font-size: 23px;
+        margin-bottom: 110px;
+    }
+
+    .item .des {
+        font-size: 18px;
+        margin-bottom: 50px;
     }
 
     .item:nth-child(5) {
@@ -331,5 +443,74 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .item .content {
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width:800px) {
+    .container {
+        top: 35%;
+        margin-top: 130px;
+        height: 50vh;
+    }
+
+    .item{
+        width: 200px;
+        height: 250px;
+    }
+
+    .item .name {
+        font-size: 28px;
+        margin-bottom: 150px;
+    }
+
+    .item .des {
+        font-size: 25px;
+        margin-bottom: 50px;
+    }
+
+    .item .content {
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width:850px) {
+    .container {
+        top: 40%;
+        margin-top: 100px;
+        height: 50vh;
+    }
+
+    .item .name {
+        font-size: 35px;
+        margin-bottom: 150px;
+    }
+
+    .item .des {
+        font-size: 28px;
+        margin-bottom: 50px;
+    }
+
+    .item .content {
+        left: 10px;
+    }
+}
+
+@media screen and (min-width: 861px) and (max-width:1050px) {
+    .container {
+        top: 30%;
+        margin-top: 130px;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1051px) and (max-width:2000px) {
+    .container {
+        top: 35%;
+        margin-top: 130px;
+        height: 50vh;
     }
 }

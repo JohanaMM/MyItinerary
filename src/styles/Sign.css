@@ -14,7 +14,7 @@
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
-    background-color: #ffffffc7;
+    background-color: #ffffffc7 !important;
     border-radius: 15px;
     height: 19px;
 }

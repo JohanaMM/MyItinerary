@@ -15,7 +15,6 @@ function Cities() {
   async function getData() {
     const citiesDB = await axios.get("https://mairene-api-citi-crud.onrender.com/api/cities");
     setCities(citiesDB.data.response.cities);
-    console.log(citiesDB.data.response.cities[1].image)
   }
 
   useEffect(() => {

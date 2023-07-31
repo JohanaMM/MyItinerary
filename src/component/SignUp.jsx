@@ -143,7 +143,6 @@ function SignUp(props) {
               </button>
               <button 
               className="buttonsocial"
-              onClick={login}
               > 
                <img src={iconF} className='iconGoogle' alt="Google" />{' '}Sign in with Facebook 
               </button>

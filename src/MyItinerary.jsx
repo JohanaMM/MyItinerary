@@ -22,7 +22,7 @@ function MyItinerary() {
           <Route path='/Cities' element={<Cities />}></Route>
           <Route path='/CityDetails/:id' element={<CityDetails />}></Route>
           <Route path='/Itineraries/:id' element={<Itineraries />}></Route>
-          <Route path='/ShoppingCart' element={<ShoppingCart />}></Route>
+          <Route path='/ShoppingCart/:id' element={<ShoppingCart />}></Route>
           <Route path='/SignIn' element={<SignIn />}></Route>
           <Route path='/SignUp' element={<SignUp />}></Route>
         </Routes>
