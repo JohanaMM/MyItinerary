@@ -1,39 +1,162 @@
-.shoppingCart{
+.bodyCart,
+.loadingCart {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ditailsItinerary {
+  width: 40%;
+  height: 90%;
+  background-color: #ffffff93;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ditailsItinerary p {
+  font-size: 18px;
+  text-align: center;
+  padding: 15px;
+  color: black;
+  text-decoration: underline;
+}
+
+.ditailsItinerary h5 {
+  padding: 5px 20px;
+}
+
+.confirmation {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ditailsBody {
+  width: 90%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ditailsImage {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.imgCart {
+  height: 120px;
+}
+
+.ditailsCart {
+  width: 60%;
+}
+
+.ditailsCart p {
+  text-decoration: none;
+  font-size: 16px;
+  text-align: left;
+  padding: 0;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:invalid {
+  background-color: transparent;
+  height: 15px;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  border: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .bodyCart,
+  .loadingCart {
     width: 100vw;
-    height: 65vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-}
-
-.shoppingCart p{
-    font-size: 40px;
-    color: #3a0868;
-}
-
-.animationC::after {
-    content: "";
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    height: 4px;
-    background-color: #ffe600e1;
-    animation: underline-glow 2s linear infinite;
-  }
-  
-  @keyframes underline-glow {
-    0% {
-      transform: scaleX(0);
-    }
-    50% {
-      transform: scaleX(1);
-    }
-    100% {
-      transform: scaleX(0);
-    }
   }
 
-.imgUC{
-    width: 500px;
+  .ditailsItinerary {
+    width: 70%;
+    margin: 20px 0px;
+  }
+
+  .ditailsItinerary p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ditailsCart{
+    width: 100%;
+  }
+
+  .ditailsCart p {
+  font-size: 12px;
+  }
+
+  .ditailsBody {
+    flex-direction: column;
+  }
+  .imgCart {
+    height: 140px;
+  }
+
+  .confirmation{
+    width: 90%;
+    margin: 30px 0px;
+  }
+
+  .confirmationP{
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+
+  .bodyCart,
+  .loadingCart {
+    width: 100vw;
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .ditailsItinerary {
+    width: 70%;
+    margin: 20px 0px;
+  }
+
+  .imgCart {
+    height: 200px;
+  }
+
+
+  .ditailsImage {
+    width: 50%;
+  }
+
+  .ditailsCart {
+    width: 50%;
+  }
+
+  .confirmation {
+    width: 50%;
+    margin: 20px 0px;
+  }
 }
