@@ -116,12 +116,12 @@ export default function SignIn(props) {
                 className="buttonsocial"
                 onClick={login}
               >
-                <img src={iconG} className='iconGoogle' alt="Google" />Sign in with Google {' '}
+                <img src={iconG} className='iconGoogle' alt="Google" />{' '}Google 
               </button>
               <button 
               className="buttonsocial"
               > 
-               <img src={iconF} className='iconGoogle' alt="Google" />{' '}Sign in with Facebook 
+               <img src={iconF} className='iconGoogle' alt="Google" />{' '}Facebook 
               </button>
               </div>
               <Grid container style={{ marginTop: '20px' }}>

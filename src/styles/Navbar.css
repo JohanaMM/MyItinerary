@@ -73,7 +73,7 @@ a{
 
 @media screen and (max-width: 289px) {
     .logoNav{
-        width: 40px;
+        width: 50px;
         margin-left: 10px;
     }
 
@@ -98,7 +98,23 @@ a{
     }
 
 }
-@media screen and (min-width: 290px) and (max-width: 800px) {
+@media screen and (min-width: 290px) and (max-width: 489px) {
+    .user{
+        width: 38%;
+        margin-right: 5px;
+    }
+
+    .cities p{
+        font-size: 20px;
+    }
+
+    .logoNav {
+        width: 60px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 490px) and (max-width: 740px) {
     .bg-body-tertiary {
         top: 0%;
     }
@@ -150,7 +166,7 @@ a{
     }
 
     .cities{
-        width: 1%;
+        width: fit-content;
     }
 
     .cities p{
@@ -159,6 +175,16 @@ a{
 
     .user{
         width: 55%;
+        margin-right: 10px;
     }
 }
 
+@media screen and (min-width: 741px) and (max-width: 1024px) {
+    .logoNav {
+        margin-left: 10px;
+    }
+
+    .user{
+        width: 65%;
+    }
+}

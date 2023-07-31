@@ -137,7 +137,7 @@ function Home() {
             <Navbar />
             <div className="bodyHome">
                 <div className='CallTo'>
-                    <h4>Where will your next adventure be?</h4>
+                    <p>Where will your next adventure be?</p>
                     <LinkRouter to={"/Cities"}>
                         <button className="animationI buttonI">Find out <FaPlaneDeparture /></button>
                     </LinkRouter>
